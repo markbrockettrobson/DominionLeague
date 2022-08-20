@@ -1,11 +1,23 @@
 #[macro_use] extern crate rocket;
 
-#[get("/")]
-fn index() -> &'static str {
-    "Hello, world!"
-}
+pub mod endpoints;
+
+use rocket::{Rocket, Build, build};
+
+use crate::endpoints::health::health;
 
 #[launch]
-fn rocket() -> _ {
-    rocket::build().mount("/", routes![index])
+#[mutants::skip]
+fn launch_app() -> Rocket<Build> {
+    build().mount("/", routes![health])
+}
+
+#[cfg(test)]
+mod test {
+    use super::launch_app;
+
+    #[test]
+    fn launch_app_should_not_panic() {
+        let _ = launch_app();
+    }
 }
