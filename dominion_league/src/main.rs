@@ -1,6 +1,7 @@
 #[macro_use] extern crate rocket;
 
 pub mod endpoints;
+pub mod model;
 
 use rocket::{Rocket, Build, build};
 
