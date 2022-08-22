@@ -1,0 +1,77 @@
+[
+    {
+        "id": 0,
+        "name": "Dominion",
+        "editions": 2
+    },
+    {
+        "id": 1,
+        "name": "Intrigue",
+        "editions": 2
+    },
+    {
+        "id": 2,
+        "name": "Seaside",
+        "editions": 2
+    },
+    {
+        "id": 3,
+        "name": "Alchemy",
+        "editions": 1
+    },
+    {
+        "id": 4,
+        "name": "Prosperity",
+        "editions": 2
+    },
+    {
+        "id": 5,
+        "name": "Cornucopia",
+        "editions": 1
+    },
+    {
+        "id": 6,
+        "name": "Hinterlands",
+        "editions": 2
+    },
+    {
+        "id": 7,
+        "name": "Dark Ages",
+        "editions": 1
+    },
+    {
+        "id": 8,
+        "name": "Guilds",
+        "editions": 1
+    },
+    {
+        "id": 9,
+        "name": "Adventures",
+        "editions": 1
+    },
+    {
+        "id": 10,
+        "name": "Empires",
+        "editions": 1
+    },
+    {
+        "id": 11,
+        "name": "Nocturne",
+        "editions": 1
+    },
+    {
+        "id": 12,
+        "name": "Renaissance",
+        "editions": 1
+    },
+    {
+        "id": 13,
+        "name": "Menagerie",
+        "editions": 1
+    },
+    {
+        "id": 14,
+        "name": "Allies",
+        "editions": 1
+    }
+]
