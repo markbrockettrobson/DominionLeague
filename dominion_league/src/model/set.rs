@@ -72,14 +72,14 @@ mod test {
         let set = Set { id: 2, name: "set".to_string(), editions: 1 };
         let json = serde_json::to_string(&set).unwrap();
         
-        assert_eq!(json,  "{\"id\":2,\"name\":\"set\",\"edition\":1}");
+        assert_eq!(json,  "{\"id\":2,\"name\":\"set\",\"editions\":1}");
     }
 
     #[test]
     #[allow(clippy::nonminimal_bool)]
     fn test_deserialize() {
         let set = Set { id: 2, name: "set".to_string(), editions: 1 };
-        let json = "{\"id\":2,\"name\":\"set\",\"edition\":1}";
+        let json = "{\"id\":2,\"name\":\"set\",\"editions\":1}";
         let json_set: Set = serde_json::from_str(json).unwrap();
 
         assert_eq!(json_set, set);
@@ -91,7 +91,7 @@ mod test {
             let set = Set { id: test_id, name: test_name.to_string(), editions: test_edition };
             assert_eq!(
                 format!("{set:?}"), 
-                format!("Set {{ id: {}, name: {:?}, edition: {} }}", test_id, test_name, test_edition));
+                format!("Set {{ id: {}, name: {:?}, editions: {} }}", test_id, test_name, test_edition));
         }
     }
 }
