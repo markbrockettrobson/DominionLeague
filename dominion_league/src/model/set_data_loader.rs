@@ -3,10 +3,12 @@ use rocket::serde::json::serde_json;
 
 use super::set::Set;
 
+
+pub static SET_JSON_BYTES: &[u8] = include_bytes!("raw_data\\sets.json");
+
 #[allow(dead_code)]
 fn get_set_vec() -> Vec<Set> {
-    let set_bytes = include_bytes!("raw_data\\sets.json");
-    let set_json = String::from_utf8_lossy(set_bytes).into_owned();
+    let set_json = String::from_utf8_lossy(SET_JSON_BYTES).into_owned();
     serde_json::from_str(&set_json).unwrap()
 }
 
