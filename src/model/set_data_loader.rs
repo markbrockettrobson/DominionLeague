@@ -4,7 +4,7 @@ use rocket::serde::json::serde_json;
 use super::set::Set;
 
 
-pub static SET_JSON_BYTES: &[u8] = include_bytes!("raw_data\\sets.json");
+pub static SET_JSON_BYTES: &[u8] = include_bytes!("raw_data/sets.json");
 
 #[allow(dead_code)]
 fn get_set_vec() -> Vec<Set> {
