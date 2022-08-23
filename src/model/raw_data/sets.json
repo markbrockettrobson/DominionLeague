@@ -2,76 +2,226 @@
     {
         "id": 0,
         "name": "Dominion",
-        "editions": 2
+        "editions": [1, 2],
+        "cover_art_url": [
+            "https://www.riograndegames.com/wp-content/uploads/2020/03/Dominion_image1_2019.jpg", 
+            "https://www.riograndegames.com/wp-content/uploads/2016/09/Dominion-2nd-Edition-Cover-700x700.png"
+        ],
+        "rule_book_url": [
+            "https://www.riograndegames.com/wp-content/uploads/2020/03/Dominion-gameRules.pdf",
+            "https://www.riograndegames.com/wp-content/uploads/2016/09/Dominion2nd.pdf"
+        ],
+        "icon_url": [
+            "http://wiki.dominionstrategy.com/images/archive/b/b0/20161017143701%21Dominion_icon.png",
+            "http://wiki.dominionstrategy.com/images/b/b0/Dominion_icon.png"
+        ]
     },
     {
         "id": 1,
         "name": "Intrigue",
-        "editions": 2
+        "editions": [1, 2],
+        "cover_art_url": [
+            "http://wiki.dominionstrategy.com/images/f/f2/Intrigue.jpg", 
+            "https://www.riograndegames.com/wp-content/uploads/2021/09/Intrigue-2nd-Edition-Updated-Cover-700x707.png"
+        ],
+        "rule_book_url": [
+            "https://github.com/blakevanlan/KingdomCreator/raw/master/docs/rules/intrigue.pdf",
+            "https://www.riograndegames.com/wp-content/uploads/2022/03/Dominion-Rules-Intrigue-2nd-Edition.pdf"
+        ],
+        "icon_url": [
+            "http://wiki.dominionstrategy.com/images/thumb/archive/c/cf/20161017144055%21Intrigue_icon.png/120px-Intrigue_icon.png",
+            "http://wiki.dominionstrategy.com/images/c/cf/Intrigue_icon.png"
+        ]
     },
     {
         "id": 2,
         "name": "Seaside",
-        "editions": 2
+        "editions": [1, 2],
+        "cover_art_url": [
+            "https://www.riograndegames.com/wp-content/uploads/2021/09/Seaside-Cover-700x700.png",
+            "https://www.riograndegames.com/wp-content/uploads/2022/01/box_top_seaside2022-700x700.jpg"
+        ],
+        "rule_book_url": [
+            "https://www.riograndegames.com/wp-content/uploads/2013/02/Seaside.pdf",
+            "https://www.riograndegames.com/wp-content/uploads/2022/01/Seaside2nd.pdf"
+        ],
+        "icon_url": [
+            "http://wiki.dominionstrategy.com/images/archive/c/c5/20220517192358%21Seaside_icon.png",
+            "http://wiki.dominionstrategy.com/images/c/c5/Seaside_icon.png"
+        ]
     },
     {
         "id": 3,
         "name": "Alchemy",
-        "editions": 1
+        "editions": [1],
+        "cover_art_url": [
+            "https://www.riograndegames.com/wp-content/uploads/2020/03/Dominion-Alchemy_image1_2019.jpg"
+        ],
+        "rule_book_url": [
+            "https://www.riograndegames.com/wp-content/uploads/2022/03/Dominion-Rules-Alchemy.pdf"
+        ],
+        "icon_url": [
+            "http://wiki.dominionstrategy.com/images/6/6a/Alchemy_icon.png"
+        ]
     },
     {
         "id": 4,
         "name": "Prosperity",
-        "editions": 2
+        "editions": [1, 2],
+        "cover_art_url": [
+            "https://www.riograndegames.com/wp-content/uploads/2020/03/Dominion-Prosperity_image1_2013.jpg",
+            "https://www.riograndegames.com/wp-content/uploads/2022/05/Prosperity-2nd-Edition-Cover-700x700.jpg"
+        ],
+        "rule_book_url": [
+            "https://www.riograndegames.com/wp-content/uploads/2022/03/Dominion-Rules-Prosperity.pdf",
+            "https://www.riograndegames.com/wp-content/uploads/2022/05/Prosperity2nd.pdf"
+        ],
+        "icon_url": [
+            "http://wiki.dominionstrategy.com/images/archive/f/fb/20220531173623%21Prosperity_icon.png",
+            "http://wiki.dominionstrategy.com/images/f/fb/Prosperity_icon.png"
+        ]
     },
     {
         "id": 5,
         "name": "Cornucopia",
-        "editions": 1
+        "editions": [1],
+        "cover_art_url": [
+            "https://www.riograndegames.com/wp-content/uploads/2020/03/Dominion-Cornucopia-Amp-Guilds_image1_2017-700x689.jpg"
+        ],
+        "rule_book_url": [
+            "https://www.riograndegames.com/wp-content/uploads/2022/03/Dominion-Rules-GuildsCornucopia.pdf"
+        ],
+        "icon_url": [
+            "http://wiki.dominionstrategy.com/images/2/20/Cornucopia_icon.png"
+        ]
     },
     {
         "id": 6,
         "name": "Hinterlands",
-        "editions": 2
+        "editions": [1, 2],
+        "cover_art_url": [
+            "https://www.riograndegames.com/wp-content/uploads/2020/03/Dominion-Hinterlands_image1_2019.jpg",
+            "https://www.riograndegames.com/wp-content/uploads/2022/06/Dominion-Hinterlands-2nd-Box-cover-700x700.jpg"
+        ],
+        "rule_book_url": [
+            "https://www.riograndegames.com/wp-content/uploads/2022/03/Dominion-Rules-Hinterlands.pdf",
+            "https://www.riograndegames.com/wp-content/uploads/2022/05/Hinterlands2nd.pdf"
+        ],
+        "icon_url": [
+            "http://wiki.dominionstrategy.com/images/archive/2/28/20220627105800%21Hinterlands_icon.png",
+            "http://wiki.dominionstrategy.com/images/2/28/Hinterlands_icon.png"
+        ]
     },
     {
         "id": 7,
         "name": "Dark Ages",
-        "editions": 1
+        "editions": [1],
+        "cover_art_url": [
+            "https://www.riograndegames.com/wp-content/uploads/2013/02/Dark-Ages-Cover-700x700.png"
+        ],
+        "rule_book_url": [
+            "https://www.riograndegames.com/wp-content/uploads/2022/03/Dominion-Rules-DarkAges.pdf"
+        ],
+        "icon_url": [
+            "http://wiki.dominionstrategy.com/images/1/1b/Dark_Ages_icon.png"
+        ]
     },
     {
         "id": 8,
         "name": "Guilds",
-        "editions": 1
+        "editions": [1],
+        "cover_art_url": [
+            "https://www.riograndegames.com/wp-content/uploads/2020/03/Dominion-Cornucopia-Amp-Guilds_image1_2017-700x689.jpg"
+        ],
+        "rule_book_url": [
+            "https://www.riograndegames.com/wp-content/uploads/2022/03/Dominion-Rules-GuildsCornucopia.pdf"
+        ],
+        "icon_url": [
+            "http://wiki.dominionstrategy.com/images/3/36/Guilds_icon.png"
+        ]
     },
     {
         "id": 9,
         "name": "Adventures",
-        "editions": 1
+        "editions": [1],
+        "cover_art_url": [
+            "https://www.riograndegames.com/wp-content/uploads/2015/01/Adventures-Cover-700x700.png"
+        ],
+        "rule_book_url": [
+            "https://www.riograndegames.com/wp-content/uploads/2022/03/Dominion-Rules-Adventures.pdf"
+        ],
+        "icon_url": [
+            "http://wiki.dominionstrategy.com/images/5/5e/Adventures_icon.png"
+        ]
     },
     {
         "id": 10,
         "name": "Empires",
-        "editions": 1
+        "editions": [1],
+        "cover_art_url": [
+            "https://www.riograndegames.com/wp-content/uploads/2020/03/Dominion-Empires_image1_2017.jpg"
+        ],
+        "rule_book_url": [
+            "https://www.riograndegames.com/wp-content/uploads/2022/03/Dominion-Rules-Empires.pdf"
+        ],
+        "icon_url": [
+            "http://wiki.dominionstrategy.com/images/2/2a/Empires_icon.png"
+        ]
     },
     {
         "id": 11,
         "name": "Nocturne",
-        "editions": 1
+        "editions": [1],
+        "cover_art_url": [
+            "https://www.riograndegames.com/wp-content/uploads/2020/03/Dominion-Nocturne_image1_2017.jpg"
+        ],
+        "rule_book_url": [
+            "https://www.riograndegames.com/wp-content/uploads/2022/03/Dominion-Rules-Nocturne.pdf"
+        ],
+        "icon_url": [
+            "http://wiki.dominionstrategy.com/images/a/aa/Nocturne_icon.png"
+        ]
     },
     {
         "id": 12,
         "name": "Renaissance",
-        "editions": 1
+        "editions": [1],
+        "cover_art_url": [
+            "https://www.riograndegames.com/wp-content/uploads/2020/03/Dominion-Renaissance_image2_2018.jpg"
+        ],
+        "rule_book_url": [
+            "https://www.riograndegames.com/wp-content/uploads/2022/03/Dominion-Rules-Renaissance.pdf"
+        ],
+        "icon_url": [
+            "http://wiki.dominionstrategy.com/images/4/4c/Renaissance_icon.png"
+        ]
     },
     {
         "id": 13,
         "name": "Menagerie",
-        "editions": 1
+        "editions": [1],
+        "cover_art_url": [
+            "https://www.riograndegames.com/wp-content/uploads/2020/03/Dominiona-Menagerie_image1_2020-700x700.jpg"
+        ],
+        "rule_book_url": [
+            "https://www.riograndegames.com/wp-content/uploads/2020/01/Dominion-Menagerie-Rules.pdf"
+        ],
+        "icon_url": [
+            "http://wiki.dominionstrategy.com/images/d/d4/Menagerie_%28expansion%29_icon.png"
+        ]
     },
     {
         "id": 14,
         "name": "Allies",
-        "editions": 1
+        "editions": [1],
+        "cover_art_url": [
+            "https://www.riograndegames.com/wp-content/uploads/2021/09/BT-Allies-700x700.jpg"
+        ],
+        "rule_book_url": [
+            "https://www.riograndegames.com/wp-content/uploads/2021/09/Dominion-Allies-Rules.pdf"
+        ],
+        "icon_url": [
+            "http://wiki.dominionstrategy.com/images/3/3d/Allies_icon.png"
+        ]
     }
 ]

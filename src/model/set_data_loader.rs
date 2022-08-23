@@ -22,7 +22,10 @@ mod test {
         let sets = get_set_vec();
         assert_eq!(sets[0].id, 0);
         assert_eq!(sets[0].name, "Dominion");
-        assert_eq!(sets[0].editions, 2);
+        assert_eq!(sets[0].editions, vec![1, 2]);
+        assert_eq!(sets[0].cover_art_url.len(), 2);
+        assert_eq!(sets[0].rule_book_url.len(), 2);
+        assert_eq!(sets[0].icon_url.len(), 2);
     }
 
     #[test]
