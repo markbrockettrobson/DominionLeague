@@ -8,7 +8,6 @@ pub struct Set {
     pub editions: u8,
 }
 
-
 #[cfg(test)]
 mod test {
     use super::*;
@@ -26,10 +25,10 @@ mod test {
     }
     
     #[test]
-    #[allow(clippy::redundant_clone)]
     fn test_clone_from() {
         let set_one = Set { id: 2, name: "set two".to_string(), editions: 2 };
-        let set_two = set_one.clone();
+        let mut set_two = Set { id: 1, name: "set not two".to_string(), editions: 4 };
+        set_two.clone_from(&set_one);
         assert_eq!(set_two.id, 2);
         assert_eq!(set_two.name, "set two");
         assert_eq!(set_two.editions, 2);
