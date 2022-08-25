@@ -7,7 +7,7 @@ use super::super::set::Set;
 pub static SET_JSON_BYTES: &[u8] = include_bytes!("../raw_data/sets.json");
 
 #[allow(dead_code)]
-fn get_set_vec() -> Vec<Set> {
+pub fn get_set_vec() -> Vec<Set> {
     let set_json = String::from_utf8_lossy(SET_JSON_BYTES).into_owned();
     serde_json::from_str(&set_json).unwrap()
 }
