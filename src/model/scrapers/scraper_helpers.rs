@@ -14,12 +14,7 @@ pub(crate) async fn download_file_to_path(
 
 fn save_byes_to_file(file_path_str: &str, mut bytes: rocket::http::hyper::body::Bytes) -> Result<()> {
     let file_path = Path::new(file_path_str);
-    match file_path.parent(){
-        Some(parent) => {
-            create_dir_all(parent)?;
-        },
-        None => (),
-    }
+    if let Some(parent) = file_path.parent() { create_dir_all(parent)? }
     let mut file_pointer = File::create(file_path)?;
     let mut cursor = Cursor::new(&mut bytes);
     io::copy(&mut cursor, &mut file_pointer)?;
@@ -39,7 +34,7 @@ mod test {
         let logo_url = "https://github.githubassets.com/favicons/favicon.svg";
         let expected_sample_file_path = "src/model/scrapers/sample_files/github.svg";
         let download_folder = "src/model/scrapers/sample_files/download";
-        let file_path = format!("{}/downloaded.svg", download_folder.clone());
+        let file_path = format!("{}/downloaded.svg", download_folder);
 
         let _ = remove_dir_all(download_folder);
         let _ = download_file_to_path(&file_path, logo_url).await;
