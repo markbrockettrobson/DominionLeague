@@ -29,32 +29,22 @@ fn save_byes_to_file(file_path_str: &str, mut bytes: rocket::http::hyper::body::
 #[cfg(test)]
 mod test {
     use tokio;
-    use file_diff::{diff};
-    use std::fs;
+    use file_diff::diff;
+    use std::fs::remove_dir_all;
 
-    use super::*;
+    use super::download_file_to_path;
 
     #[tokio::test]
     async fn test_download_file_to_path() {
         let logo_url = "https://github.githubassets.com/favicons/favicon.svg";
         let expected_sample_file_path = "src/model/scrapers/sample_files/github.svg";
-        let file_path = "src/model/scrapers/sample_files/downloaded.svg";
+        let download_folder = "src/model/scrapers/sample_files/download";
+        let file_path = format!("{}/downloaded.svg", download_folder.clone());
 
-        match fs::remove_file(file_path) {
-            Ok(_) => (),
-            Err(_) => (),
-        }
-        match download_file_to_path(file_path, logo_url).await {
-            Ok(_) => (),
-            Err(_) => {
-                panic!("Did not work.")
-            }
-        }
+        let _ = remove_dir_all(download_folder);
+        let _ = download_file_to_path(&file_path, logo_url).await;
         
-        assert!(diff(expected_sample_file_path, file_path));
-        match fs::remove_file(file_path) {
-            Ok(_) => (),
-            Err(_) => (),
-        }
+        assert!(diff(expected_sample_file_path, &file_path));
+        let _ = remove_dir_all(download_folder);
     }
 }
