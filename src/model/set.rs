@@ -1,4 +1,5 @@
 use rocket::serde::{Deserialize, Serialize};
+use regex::Regex;
 
 #[derive(Debug, Clone, Eq, PartialEq, Deserialize, Serialize)]
 #[serde(crate = "rocket::serde")]
@@ -37,6 +38,33 @@ impl Set {
             rule_book_url,
             icon_url
         }
+    }
+}
+
+pub trait SetFilePaths {
+    fn get_cover_art_path(&self, edition: u8) -> String;
+    fn get_rule_book_path(&self, edition: u8) -> String;
+    fn get_icon_path(&self, edition: u8) -> String;
+}
+
+impl SetFilePaths for Set {
+    fn get_cover_art_path(&self, edition: u8) -> String {
+        if !self.editions.contains(&edition){ panic!("Unkowen edition."); }
+        let unsafe_filename = format!("../scraped_data/{0}_{1}/{0}_{1}_cover_art.png", self.name, edition);
+        let regex = Regex::new(r"[\s<>:;',?*|\\]").unwrap();
+        regex.replace_all(&unsafe_filename, "-").as_ref().to_string()
+    }
+    fn get_rule_book_path(&self, edition: u8) -> String{
+        if !self.editions.contains(&edition){ panic!("Unkowen edition."); }
+        let unsafe_filename = format!("../scraped_data/{0}_{1}/{0}_{1}_rules.pdf", self.name, edition);
+        let regex = Regex::new(r"[\s<>:;',?*|\\]").unwrap();
+        regex.replace_all(&unsafe_filename, "-").as_ref().to_string()   
+    }
+    fn get_icon_path(&self, edition: u8) -> String{
+        if !self.editions.contains(&edition){ panic!("Unkowen edition."); }
+        let unsafe_filename = format!("../scraped_data/{0}_{1}/{0}_{1}_icon.png", self.name, edition);
+        let regex = Regex::new(r"[\s<>:;',?*|\\]").unwrap();
+        regex.replace_all(&unsafe_filename, "-").as_ref().to_string()    
     }
 }
 
@@ -384,4 +412,89 @@ mod test {
             "Set { id: 1, name: \"test name\", editions: [1, 2], cover_art_url: [\"www.cover_art_url.com\", \"www.cover_art_url2.com\"], rule_book_url: [\"www.rule_book_url.com\", \"www.rule_book_url2.com\"], icon_url: [\"www.icon_url2.com\", \"www.icon_url6.com\"] }"
         );
     }
+
+    #[test]
+    fn test_get_cover_art_path() {
+        let set = Set::new( 
+            1, 
+            "test name'one".to_string(),
+            vec![1, 2], 
+            vec!["www.cover_art_url.com".to_owned(), "www.cover_art_url2.com".to_owned()], 
+            vec!["www.rule_book_url.com".to_owned(), "www.rule_book_url2.com".to_owned()], 
+            vec!["www.icon_url2.com".to_owned(), "www.icon_url3.com".to_owned()]
+        );
+        assert_eq!(set.get_cover_art_path(1), "../scraped_data/test-name-one_1/test-name-one_1_cover_art.png");
+        assert_eq!(set.get_cover_art_path(2), "../scraped_data/test-name-one_2/test-name-one_2_cover_art.png");
+    }
+        
+    #[test]
+    #[should_panic = "Unkowen edition."]
+    fn test_get_cover_art_path_unknowen_edition() {
+        let set = Set::new( 
+            1, 
+            "test name'one".to_string(),
+            vec![1, 2], 
+            vec!["www.cover_art_url.com".to_owned(), "www.cover_art_url2.com".to_owned()], 
+            vec!["www.rule_book_url.com".to_owned(), "www.rule_book_url2.com".to_owned()], 
+            vec!["www.icon_url2.com".to_owned(), "www.icon_url3.com".to_owned()]
+        );
+        let _ = set.get_cover_art_path(45);
+    }
+
+    #[test]
+    fn test_get_rule_book_path() {
+        let set = Set::new( 
+            1, 
+            "test?name|one".to_string(),
+            vec![1, 2], 
+            vec!["www.cover_art_url.com".to_owned(), "www.cover_art_url2.com".to_owned()], 
+            vec!["www.rule_book_url.com".to_owned(), "www.rule_book_url2.com".to_owned()], 
+            vec!["www.icon_url2.com".to_owned(), "www.icon_url3.com".to_owned()]
+        );
+        assert_eq!(set.get_rule_book_path(1), "../scraped_data/test-name-one_1/test-name-one_1_rules.pdf");
+        assert_eq!(set.get_rule_book_path(2), "../scraped_data/test-name-one_2/test-name-one_2_rules.pdf");
+    }
+        
+    #[test]
+    #[should_panic = "Unkowen edition."]
+    fn test_get_rule_book_path_unknowen_edition() {
+        let set = Set::new( 
+            1, 
+            "test name'one".to_string(),
+            vec![1, 2], 
+            vec!["www.cover_art_url.com".to_owned(), "www.cover_art_url2.com".to_owned()], 
+            vec!["www.rule_book_url.com".to_owned(), "www.rule_book_url2.com".to_owned()], 
+            vec!["www.icon_url2.com".to_owned(), "www.icon_url3.com".to_owned()]
+        );
+        let _ = set.get_rule_book_path(45);
+    }
+
+    #[test]
+    fn test_get_icon_path() {
+        let set = Set::new( 
+            1, 
+            "test name'one".to_string(),
+            vec![1, 2], 
+            vec!["www.cover_art_url.com".to_owned(), "www.cover_art_url2.com".to_owned()], 
+            vec!["www.rule_book_url.com".to_owned(), "www.rule_book_url2.com".to_owned()], 
+            vec!["www.icon_url2.com".to_owned(), "www.icon_url3.com".to_owned()]
+        );
+        assert_eq!(set.get_icon_path(1), "../scraped_data/test-name-one_1/test-name-one_1_icon.png");
+        assert_eq!(set.get_icon_path(2), "../scraped_data/test-name-one_2/test-name-one_2_icon.png");
+    }
+        
+    #[test]
+    #[should_panic = "Unkowen edition."]
+    fn test_get_icon_path_unknowen_edition() {
+        let set = Set::new( 
+            1, 
+            "test name'one".to_string(),
+            vec![1, 2], 
+            vec!["www.cover_art_url.com".to_owned(), "www.cover_art_url2.com".to_owned()], 
+            vec!["www.rule_book_url.com".to_owned(), "www.rule_book_url2.com".to_owned()], 
+            vec!["www.icon_url2.com".to_owned(), "www.icon_url3.com".to_owned()]
+        );
+        let _ = set.get_icon_path(45);
+    }
+
 }
