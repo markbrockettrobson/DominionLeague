@@ -10,9 +10,9 @@ pub struct Card {
     pub set_id: u8,
     pub editions: Vec<u8>,
     pub card_tags: Vec<CardTag>,
-    pub kindom_requirements: Vec<CardTag>,
-    pub kindom_synergies: Vec<CardTag>,
-    pub kindom_anti_synergies: Vec<CardTag>,
+    pub kindom_requirements: Vec<Vec<CardTag>>,
+    pub kindom_synergies: Vec<Vec<CardTag>>,
+    pub kindom_anti_synergies: Vec<Vec<CardTag>>,
     pub card_types: Vec<CardType>
 }
 
@@ -30,9 +30,9 @@ mod test {
             set_id: 0,
             editions: [1, 2].to_vec(),
             card_tags: [CardTag::CostsAction].to_vec(),
-            kindom_requirements: [CardTag::AddCardToTopOfDeck].to_vec(),
-            kindom_synergies: [CardTag::CanReplaceAction].to_vec(),
-            kindom_anti_synergies: [CardTag::WillReplaceAction].to_vec(),
+            kindom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
+            kindom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
+            kindom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
             card_types: [CardType::Action, CardType::Attack ,CardType::Curse].to_vec()
 
         };
@@ -51,9 +51,9 @@ mod test {
             set_id: 0,
             editions: [1, 2].to_vec(),
             card_tags: [CardTag::CostsAction].to_vec(),
-            kindom_requirements: [CardTag::AddCardToTopOfDeck].to_vec(),
-            kindom_synergies: [CardTag::CanReplaceAction].to_vec(),
-            kindom_anti_synergies: [CardTag::WillReplaceAction].to_vec(),
+            kindom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
+            kindom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
+            kindom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
             card_types: [CardType::Action, CardType::Attack ,CardType::Curse].to_vec()
 
         };
@@ -63,9 +63,9 @@ mod test {
             set_id: 2,
             editions: [2].to_vec(),
             card_tags: [CardTag::CostsAction].to_vec(),
-            kindom_requirements: [CardTag::AddCardToTopOfDeck].to_vec(),
-            kindom_synergies: [CardTag::CanReplaceAction].to_vec(),
-            kindom_anti_synergies: [CardTag::WillReplaceAction].to_vec(),
+            kindom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
+            kindom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
+            kindom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
             card_types: [CardType::Action, CardType::Attack ,CardType::Curse].to_vec()
 
         };
@@ -82,9 +82,9 @@ mod test {
             set_id: 0,
             editions: [1, 2].to_vec(),
             card_tags: [CardTag::CostsAction].to_vec(),
-            kindom_requirements: [CardTag::AddCardToTopOfDeck].to_vec(),
-            kindom_synergies: [CardTag::CanReplaceAction].to_vec(),
-            kindom_anti_synergies: [CardTag::WillReplaceAction].to_vec(),
+            kindom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
+            kindom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
+            kindom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
             card_types: [CardType::Action, CardType::Attack ,CardType::Curse].to_vec()
 
         };
@@ -94,9 +94,9 @@ mod test {
             set_id: 0,
             editions: [1, 2].to_vec(),
             card_tags: [CardTag::CostsAction].to_vec(),
-            kindom_requirements: [CardTag::AddCardToTopOfDeck].to_vec(),
-            kindom_synergies: [CardTag::CanReplaceAction].to_vec(),
-            kindom_anti_synergies: [CardTag::WillReplaceAction].to_vec(),
+            kindom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
+            kindom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
+            kindom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
             card_types: [CardType::Action, CardType::Attack ,CardType::Curse].to_vec()
 
         };
@@ -112,9 +112,9 @@ mod test {
             set_id: 0,
             editions: [1, 2].to_vec(),
             card_tags: [CardTag::CostsAction].to_vec(),
-            kindom_requirements: [CardTag::AddCardToTopOfDeck].to_vec(),
-            kindom_synergies: [CardTag::CanReplaceAction].to_vec(),
-            kindom_anti_synergies: [CardTag::WillReplaceAction].to_vec(),
+            kindom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
+            kindom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
+            kindom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
             card_types: [CardType::Action, CardType::Attack ,CardType::Curse].to_vec()
 
         };
@@ -124,9 +124,9 @@ mod test {
             set_id: 0,
             editions: [1, 2].to_vec(),
             card_tags: [CardTag::CostsAction].to_vec(),
-            kindom_requirements: [CardTag::AddCardToTopOfDeck].to_vec(),
-            kindom_synergies: [CardTag::CanReplaceAction].to_vec(),
-            kindom_anti_synergies: [CardTag::WillReplaceAction].to_vec(),
+            kindom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
+            kindom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
+            kindom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
             card_types: [CardType::Action, CardType::Attack ,CardType::Curse].to_vec()
 
         };
@@ -142,9 +142,9 @@ mod test {
             set_id: 0,
             editions: [1, 2].to_vec(),
             card_tags: [CardTag::CostsAction].to_vec(),
-            kindom_requirements: [CardTag::AddCardToTopOfDeck].to_vec(),
-            kindom_synergies: [CardTag::CanReplaceAction].to_vec(),
-            kindom_anti_synergies: [CardTag::WillReplaceAction].to_vec(),
+            kindom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
+            kindom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
+            kindom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
             card_types: [CardType::Action, CardType::Attack ,CardType::Curse].to_vec()
 
         };
@@ -154,9 +154,9 @@ mod test {
             set_id: 0,
             editions: [1, 2].to_vec(),
             card_tags: [CardTag::CostsAction].to_vec(),
-            kindom_requirements: [CardTag::AddCardToTopOfDeck].to_vec(),
-            kindom_synergies: [CardTag::CanReplaceAction].to_vec(),
-            kindom_anti_synergies: [CardTag::WillReplaceAction].to_vec(),
+            kindom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
+            kindom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
+            kindom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
             card_types: [CardType::Action, CardType::Attack ,CardType::Curse].to_vec()
 
         };
@@ -172,9 +172,9 @@ mod test {
             set_id: 0,
             editions: [1, 2].to_vec(),
             card_tags: [CardTag::CostsAction].to_vec(),
-            kindom_requirements: [CardTag::AddCardToTopOfDeck].to_vec(),
-            kindom_synergies: [CardTag::CanReplaceAction].to_vec(),
-            kindom_anti_synergies: [CardTag::WillReplaceAction].to_vec(),
+            kindom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
+            kindom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
+            kindom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
             card_types: [CardType::Action, CardType::Attack ,CardType::Curse].to_vec()
 
         };
@@ -184,9 +184,9 @@ mod test {
             set_id: 1,
             editions: [1, 2].to_vec(),
             card_tags: [CardTag::CostsAction].to_vec(),
-            kindom_requirements: [CardTag::AddCardToTopOfDeck].to_vec(),
-            kindom_synergies: [CardTag::CanReplaceAction].to_vec(),
-            kindom_anti_synergies: [CardTag::WillReplaceAction].to_vec(),
+            kindom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
+            kindom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
+            kindom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
             card_types: [CardType::Action, CardType::Attack ,CardType::Curse].to_vec()
 
         };
@@ -202,9 +202,9 @@ mod test {
             set_id: 0,
             editions: [1].to_vec(),
             card_tags: [CardTag::CostsAction].to_vec(),
-            kindom_requirements: [CardTag::AddCardToTopOfDeck].to_vec(),
-            kindom_synergies: [CardTag::CanReplaceAction].to_vec(),
-            kindom_anti_synergies: [CardTag::WillReplaceAction].to_vec(),
+            kindom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
+            kindom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
+            kindom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
             card_types: [CardType::Action, CardType::Attack ,CardType::Curse].to_vec()
 
         };
@@ -214,9 +214,9 @@ mod test {
             set_id: 0,
             editions: [1, 2].to_vec(),
             card_tags: [CardTag::CostsAction].to_vec(),
-            kindom_requirements: [CardTag::AddCardToTopOfDeck].to_vec(),
-            kindom_synergies: [CardTag::CanReplaceAction].to_vec(),
-            kindom_anti_synergies: [CardTag::WillReplaceAction].to_vec(),
+            kindom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
+            kindom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
+            kindom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
             card_types: [CardType::Action, CardType::Attack ,CardType::Curse].to_vec()
 
         };
@@ -232,9 +232,9 @@ mod test {
             set_id: 0,
             editions: [1, 2].to_vec(),
             card_tags: [CardTag::WillGainBuy].to_vec(),
-            kindom_requirements: [CardTag::AddCardToTopOfDeck].to_vec(),
-            kindom_synergies: [CardTag::CanReplaceAction].to_vec(),
-            kindom_anti_synergies: [CardTag::WillReplaceAction].to_vec(),
+            kindom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
+            kindom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
+            kindom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
             card_types: [CardType::Action, CardType::Attack ,CardType::Curse].to_vec()
 
         };
@@ -244,9 +244,9 @@ mod test {
             set_id: 0,
             editions: [1, 2].to_vec(),
             card_tags: [CardTag::CostsAction].to_vec(),
-            kindom_requirements: [CardTag::AddCardToTopOfDeck].to_vec(),
-            kindom_synergies: [CardTag::CanReplaceAction].to_vec(),
-            kindom_anti_synergies: [CardTag::WillReplaceAction].to_vec(),
+            kindom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
+            kindom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
+            kindom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
             card_types: [CardType::Action, CardType::Attack ,CardType::Curse].to_vec()
 
         };
@@ -262,9 +262,9 @@ mod test {
             set_id: 0,
             editions: [1, 2].to_vec(),
             card_tags: [CardTag::CostsAction].to_vec(),
-            kindom_requirements: [CardTag::AddCardToTopOfDeck, CardTag::CurseAttack].to_vec(),
-            kindom_synergies: [CardTag::CanReplaceAction].to_vec(),
-            kindom_anti_synergies: [CardTag::WillReplaceAction].to_vec(),
+            kindom_requirements: [[CardTag::AddCardToTopOfDeck, CardTag::CurseAttack].to_vec()].to_vec(),
+            kindom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
+            kindom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
             card_types: [CardType::Action, CardType::Attack ,CardType::Curse].to_vec()
 
         };
@@ -274,9 +274,9 @@ mod test {
             set_id: 0,
             editions: [1, 2].to_vec(),
             card_tags: [CardTag::CostsAction].to_vec(),
-            kindom_requirements: [CardTag::AddCardToTopOfDeck].to_vec(),
-            kindom_synergies: [CardTag::CanReplaceAction].to_vec(),
-            kindom_anti_synergies: [CardTag::WillReplaceAction].to_vec(),
+            kindom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
+            kindom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
+            kindom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
             card_types: [CardType::Action, CardType::Attack ,CardType::Curse].to_vec()
 
         };
@@ -292,8 +292,8 @@ mod test {
             set_id: 0,
             editions: [1, 2].to_vec(),
             card_tags: [CardTag::CostsAction].to_vec(),
-            kindom_requirements: [CardTag::AddCardToTopOfDeck].to_vec(),
-            kindom_synergies: [CardTag::CanReplaceAction].to_vec(),
+            kindom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
+            kindom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
             kindom_anti_synergies: [].to_vec(),
             card_types: [CardType::Action, CardType::Attack ,CardType::Curse].to_vec()
 
@@ -304,9 +304,9 @@ mod test {
             set_id: 0,
             editions: [1, 2].to_vec(),
             card_tags: [CardTag::CostsAction].to_vec(),
-            kindom_requirements: [CardTag::AddCardToTopOfDeck].to_vec(),
-            kindom_synergies: [CardTag::CanReplaceAction].to_vec(),
-            kindom_anti_synergies: [CardTag::WillReplaceAction].to_vec(),
+            kindom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
+            kindom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
+            kindom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
             card_types: [CardType::Action, CardType::Attack ,CardType::Curse].to_vec()
 
         };
@@ -322,9 +322,9 @@ mod test {
             set_id: 0,
             editions: [1, 2].to_vec(),
             card_tags: [CardTag::CostsAction].to_vec(),
-            kindom_requirements: [CardTag::AddCardToTopOfDeck].to_vec(),
-            kindom_synergies: [CardTag::CanReplaceAction].to_vec(),
-            kindom_anti_synergies: [CardTag::WillReplaceAction].to_vec(),
+            kindom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
+            kindom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
+            kindom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
             card_types: [CardType::Action, CardType::Attack ,CardType::Curse].to_vec()
 
         };
@@ -334,8 +334,8 @@ mod test {
             set_id: 0,
             editions: [1, 2].to_vec(),
             card_tags: [CardTag::CostsAction].to_vec(),
-            kindom_requirements: [CardTag::AddCardToTopOfDeck].to_vec(),
-            kindom_synergies: [CardTag::CanReplaceAction].to_vec(),
+            kindom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
+            kindom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
             kindom_anti_synergies: [].to_vec(),
             card_types: [CardType::Action, CardType::Attack ,CardType::Curse].to_vec()
 
@@ -352,9 +352,9 @@ mod test {
             set_id: 0,
             editions: [1, 2].to_vec(),
             card_tags: [CardTag::CostsAction].to_vec(),
-            kindom_requirements: [CardTag::AddCardToTopOfDeck].to_vec(),
-            kindom_synergies: [CardTag::CanReplaceAction].to_vec(),
-            kindom_anti_synergies: [CardTag::WillReplaceAction].to_vec(),
+            kindom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
+            kindom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
+            kindom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
             card_types: [CardType::Action, CardType::Attack ,CardType::Curse].to_vec()
 
         };
@@ -364,9 +364,9 @@ mod test {
             set_id: 0,
             editions: [1, 2].to_vec(),
             card_tags: [CardTag::CostsAction].to_vec(),
-            kindom_requirements: [CardTag::AddCardToTopOfDeck].to_vec(),
-            kindom_synergies: [CardTag::CanReplaceAction].to_vec(),
-            kindom_anti_synergies: [CardTag::WillReplaceAction].to_vec(),
+            kindom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
+            kindom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
+            kindom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
             card_types: [CardType::Reaction, CardType::Action ,CardType::Victory].to_vec()
 
         };
@@ -382,9 +382,9 @@ mod test {
             set_id: 0,
             editions: [1, 2].to_vec(),
             card_tags: [CardTag::CostsAction].to_vec(),
-            kindom_requirements: [CardTag::AddCardToTopOfDeck].to_vec(),
-            kindom_synergies: [CardTag::CanReplaceAction].to_vec(),
-            kindom_anti_synergies: [CardTag::WillReplaceAction].to_vec(),
+            kindom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
+            kindom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
+            kindom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
             card_types: [CardType::Action, CardType::Attack ,CardType::Curse].to_vec()
 
         };
@@ -392,7 +392,7 @@ mod test {
         
         assert_eq!(
             json,
-            "{\"id\":1,\"name\":\"test name\",\"set_id\":0,\"editions\":[1,2],\"card_tags\":[\"CostsAction\"],\"kindom_requirements\":[\"AddCardToTopOfDeck\"],\"kindom_synergies\":[\"CanReplaceAction\"],\"kindom_anti_synergies\":[\"WillReplaceAction\"],\"card_types\":[\"Action\",\"Attack\",\"Curse\"]}");
+            "{\"id\":1,\"name\":\"test name\",\"set_id\":0,\"editions\":[1,2],\"card_tags\":[\"CostsAction\"],\"kindom_requirements\":[[\"AddCardToTopOfDeck\"]],\"kindom_synergies\":[[\"CanReplaceAction\"]],\"kindom_anti_synergies\":[[\"WillReplaceAction\"]],\"card_types\":[\"Action\",\"Attack\",\"Curse\"]}");
     }
 
     #[test]
@@ -404,12 +404,12 @@ mod test {
             set_id: 0,
             editions: [1, 2].to_vec(),
             card_tags: [CardTag::CostsAction].to_vec(),
-            kindom_requirements: [CardTag::AddCardToTopOfDeck].to_vec(),
-            kindom_synergies: [CardTag::CanReplaceAction].to_vec(),
-            kindom_anti_synergies: [CardTag::WillReplaceAction].to_vec(),
+            kindom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
+            kindom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
+            kindom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
             card_types: [CardType::Action, CardType::Attack ,CardType::Curse].to_vec()
         };
-        let json = "{\"id\":1,\"name\":\"test name\",\"set_id\":0,\"editions\":[1,2],\"card_tags\":[\"CostsAction\"],\"kindom_requirements\":[\"AddCardToTopOfDeck\"],\"kindom_synergies\":[\"CanReplaceAction\"],\"kindom_anti_synergies\":[\"WillReplaceAction\"],\"card_types\":[\"Action\",\"Attack\",\"Curse\"]}";
+        let json = "{\"id\":1,\"name\":\"test name\",\"set_id\":0,\"editions\":[1,2],\"card_tags\":[\"CostsAction\"],\"kindom_requirements\":[[\"AddCardToTopOfDeck\"]],\"kindom_synergies\":[[\"CanReplaceAction\"]],\"kindom_anti_synergies\":[[\"WillReplaceAction\"]],\"card_types\":[\"Action\",\"Attack\",\"Curse\"]}";
         let json_set: Card = serde_json::from_str(json).unwrap();
 
         assert_eq!(json_set, card);
@@ -423,14 +423,14 @@ mod test {
             set_id: 0,
             editions: [1, 2].to_vec(),
             card_tags: [CardTag::CostsAction].to_vec(),
-            kindom_requirements: [CardTag::AddCardToTopOfDeck].to_vec(),
-            kindom_synergies: [CardTag::CanReplaceAction].to_vec(),
-            kindom_anti_synergies: [CardTag::WillReplaceAction].to_vec(),
+            kindom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
+            kindom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
+            kindom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
             card_types: [CardType::Action, CardType::Attack ,CardType::Curse].to_vec()
         };
         assert_eq!(
             format!("{card:?}"), 
-            "Card { id: 1, name: \"test name\", set_id: 0, editions: [1, 2], card_tags: [CostsAction], kindom_requirements: [AddCardToTopOfDeck], kindom_synergies: [CanReplaceAction], kindom_anti_synergies: [WillReplaceAction], card_types: [Action, Attack, Curse] }");
+            "Card { id: 1, name: \"test name\", set_id: 0, editions: [1, 2], card_tags: [CostsAction], kindom_requirements: [[AddCardToTopOfDeck]], kindom_synergies: [[CanReplaceAction]], kindom_anti_synergies: [[WillReplaceAction]], card_types: [Action, Attack, Curse] }");
     }
 
 }
