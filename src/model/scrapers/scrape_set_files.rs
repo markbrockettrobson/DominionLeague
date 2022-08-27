@@ -24,7 +24,7 @@ pub(crate) async fn scrape_set_files(set: &Set) -> Result<()> {
 
 #[cfg(test)]
 mod test {
-    use std::fs::{remove_file, remove_dir_all};
+    use std::fs::remove_dir_all;
 
     use tokio;
     use file_diff::diff;
