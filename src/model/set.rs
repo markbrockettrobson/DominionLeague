@@ -456,10 +456,12 @@ mod test {
         );
         assert_eq!(
             set.get_cover_art_path(1),
-            "\\\\?\\C:\\Users\\MarkB\\DominionLeague\\src\\model\\scraped_data\\test-name-one_1\\cover.png");
+            format!("{}\\test-name-one_1\\cover.png", canonicalize("src/model/scraped_data").unwrap().to_string_lossy())
+        );
         assert_eq!(
             set.get_cover_art_path(2),
-            "\\\\?\\C:\\Users\\MarkB\\DominionLeague\\src\\model\\scraped_data\\test-name-one_2\\cover.png");
+            format!("{}\\test-name-one_2\\cover.png", canonicalize("src/model/scraped_data").unwrap().to_string_lossy())
+        );
     }
         
     #[test]
@@ -488,10 +490,12 @@ mod test {
         );
         assert_eq!(
             set.get_rule_book_path(1),
-            "\\\\?\\C:\\Users\\MarkB\\DominionLeague\\src\\model\\scraped_data\\test-name-one_1\\rules.pdf");
+            format!("{}\\test-name-one_1\\rules.pdf", canonicalize("src/model/scraped_data").unwrap().to_string_lossy())
+        );
         assert_eq!(
             set.get_rule_book_path(2),
-            "\\\\?\\C:\\Users\\MarkB\\DominionLeague\\src\\model\\scraped_data\\test-name-one_2\\rules.pdf");
+            format!("{}\\test-name-one_2\\rules.pdf", canonicalize("src/model/scraped_data").unwrap().to_string_lossy())
+        );
     }
         
     #[test]
@@ -520,10 +524,12 @@ mod test {
         );
         assert_eq!(
             set.get_icon_path(1),
-            "\\\\?\\C:\\Users\\MarkB\\DominionLeague\\src\\model\\scraped_data\\test-name-one_1\\icon.png");
+            format!("{}\\test-name-one_1\\icon.png", canonicalize("src/model/scraped_data").unwrap().to_string_lossy())
+        );
         assert_eq!(
             set.get_icon_path(2),
-            "\\\\?\\C:\\Users\\MarkB\\DominionLeague\\src\\model\\scraped_data\\test-name-one_2\\icon.png");
+            format!("{}\\test-name-one_2\\icon.png", canonicalize("src/model/scraped_data").unwrap().to_string_lossy())
+        );
     }
         
     #[test]
