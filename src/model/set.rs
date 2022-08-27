@@ -1,3 +1,5 @@
+use std::{fs::canonicalize, path::PathBuf};
+
 use rocket::serde::{Deserialize, Serialize};
 use regex::Regex;
 
@@ -50,21 +52,50 @@ pub trait SetFilePaths {
 impl SetFilePaths for Set {
     fn get_cover_art_path(&self, edition: u8) -> String {
         if !self.editions.contains(&edition){ panic!("Unkowen edition."); }
-        let unsafe_filename = format!("../scraped_data/{0}_{1}/{0}_{1}_cover_art.png", self.name, edition);
         let regex = Regex::new(r"[\s<>:;',?*|\\]").unwrap();
-        regex.replace_all(&unsafe_filename, "-").as_ref().to_string()
+        let safe_set_name = regex.replace_all(
+            format!("{0}_{1}", self.name, edition).as_str(), 
+            "-"
+        ).as_ref().to_string();
+        let target_folder = canonicalize("src/model/scraped_data/").unwrap();
+        let mut path = PathBuf::new();
+        path.push(target_folder);
+        path.push(safe_set_name);
+        path.push("cover");
+        path.set_extension("png");
+        path.as_path().to_string_lossy().into_owned()
     }
+
     fn get_rule_book_path(&self, edition: u8) -> String{
         if !self.editions.contains(&edition){ panic!("Unkowen edition."); }
-        let unsafe_filename = format!("../scraped_data/{0}_{1}/{0}_{1}_rules.pdf", self.name, edition);
         let regex = Regex::new(r"[\s<>:;',?*|\\]").unwrap();
-        regex.replace_all(&unsafe_filename, "-").as_ref().to_string()   
+        let safe_set_name = regex.replace_all(
+            format!("{0}_{1}", self.name, edition).as_str(), 
+            "-"
+        ).as_ref().to_string();
+        let target_folder = canonicalize("src/model/scraped_data/").unwrap();
+        let mut path = PathBuf::new();
+        path.push(target_folder);
+        path.push(safe_set_name);
+        path.push("rules");
+        path.set_extension("pdf");
+        path.as_path().to_string_lossy().into_owned()
     }
+
     fn get_icon_path(&self, edition: u8) -> String{
         if !self.editions.contains(&edition){ panic!("Unkowen edition."); }
-        let unsafe_filename = format!("../scraped_data/{0}_{1}/{0}_{1}_icon.png", self.name, edition);
         let regex = Regex::new(r"[\s<>:;',?*|\\]").unwrap();
-        regex.replace_all(&unsafe_filename, "-").as_ref().to_string()    
+        let safe_set_name = regex.replace_all(
+            format!("{0}_{1}", self.name, edition).as_str(), 
+            "-"
+        ).as_ref().to_string();
+        let target_folder = canonicalize("src/model/scraped_data/").unwrap();
+        let mut path = PathBuf::new();
+        path.push(target_folder);
+        path.push(safe_set_name);
+        path.push("icon");
+        path.set_extension("png");
+        path.as_path().to_string_lossy().into_owned()
     }
 }
 
@@ -423,8 +454,12 @@ mod test {
             vec!["www.rule_book_url.com".to_owned(), "www.rule_book_url2.com".to_owned()], 
             vec!["www.icon_url2.com".to_owned(), "www.icon_url3.com".to_owned()]
         );
-        assert_eq!(set.get_cover_art_path(1), "../scraped_data/test-name-one_1/test-name-one_1_cover_art.png");
-        assert_eq!(set.get_cover_art_path(2), "../scraped_data/test-name-one_2/test-name-one_2_cover_art.png");
+        assert_eq!(
+            set.get_cover_art_path(1),
+            "\\\\?\\C:\\Users\\MarkB\\DominionLeague\\src\\model\\scraped_data\\test-name-one_1\\cover.png");
+        assert_eq!(
+            set.get_cover_art_path(2),
+            "\\\\?\\C:\\Users\\MarkB\\DominionLeague\\src\\model\\scraped_data\\test-name-one_2\\cover.png");
     }
         
     #[test]
@@ -451,8 +486,12 @@ mod test {
             vec!["www.rule_book_url.com".to_owned(), "www.rule_book_url2.com".to_owned()], 
             vec!["www.icon_url2.com".to_owned(), "www.icon_url3.com".to_owned()]
         );
-        assert_eq!(set.get_rule_book_path(1), "../scraped_data/test-name-one_1/test-name-one_1_rules.pdf");
-        assert_eq!(set.get_rule_book_path(2), "../scraped_data/test-name-one_2/test-name-one_2_rules.pdf");
+        assert_eq!(
+            set.get_rule_book_path(1),
+            "\\\\?\\C:\\Users\\MarkB\\DominionLeague\\src\\model\\scraped_data\\test-name-one_1\\rules.pdf");
+        assert_eq!(
+            set.get_rule_book_path(2),
+            "\\\\?\\C:\\Users\\MarkB\\DominionLeague\\src\\model\\scraped_data\\test-name-one_2\\rules.pdf");
     }
         
     #[test]
@@ -479,8 +518,12 @@ mod test {
             vec!["www.rule_book_url.com".to_owned(), "www.rule_book_url2.com".to_owned()], 
             vec!["www.icon_url2.com".to_owned(), "www.icon_url3.com".to_owned()]
         );
-        assert_eq!(set.get_icon_path(1), "../scraped_data/test-name-one_1/test-name-one_1_icon.png");
-        assert_eq!(set.get_icon_path(2), "../scraped_data/test-name-one_2/test-name-one_2_icon.png");
+        assert_eq!(
+            set.get_icon_path(1),
+            "\\\\?\\C:\\Users\\MarkB\\DominionLeague\\src\\model\\scraped_data\\test-name-one_1\\icon.png");
+        assert_eq!(
+            set.get_icon_path(2),
+            "\\\\?\\C:\\Users\\MarkB\\DominionLeague\\src\\model\\scraped_data\\test-name-one_2\\icon.png");
     }
         
     #[test]
