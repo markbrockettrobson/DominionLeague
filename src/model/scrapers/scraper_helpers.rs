@@ -1,16 +1,14 @@
 use std::{fs::{File, create_dir_all}, io::{self, Cursor}, path::Path};
-type Result<T> = std::result::Result<T, Box<dyn std::error::Error + Send + Sync>>;
-
 use reqwest;
 
+type Result<T> = std::result::Result<T, Box<dyn std::error::Error + Send + Sync>>;
+
 #[allow(dead_code)]
-pub(crate) async fn download_file_to_path(
-    file_path_str: &str, 
-    image_url: &str) -> Result<()> {
+pub(crate) async fn download_file_to_path(file_path_str: &str, image_url: &str) -> Result<()> {
         let request_bytes = reqwest::get(image_url).await?.bytes().await?;
         save_byes_to_file(file_path_str, request_bytes)?;
         Ok(())
-    }
+}
 
 fn save_byes_to_file(file_path_str: &str, mut bytes: rocket::http::hyper::body::Bytes) -> Result<()> {
     let file_path = Path::new(file_path_str);
