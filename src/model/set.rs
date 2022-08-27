@@ -454,13 +454,12 @@ mod test {
             vec!["www.rule_book_url.com".to_owned(), "www.rule_book_url2.com".to_owned()], 
             vec!["www.icon_url2.com".to_owned(), "www.icon_url3.com".to_owned()]
         );
-        assert_eq!(
-            set.get_cover_art_path(1),
-            format!("{}\\test-name-one_1\\cover.png", canonicalize("src/model/scraped_data").unwrap().to_string_lossy())
-        );
-        assert_eq!(
-            set.get_cover_art_path(2),
-            format!("{}\\test-name-one_2\\cover.png", canonicalize("src/model/scraped_data").unwrap().to_string_lossy())
+        assert!(
+            set.get_cover_art_path(1).ends_with("\\test-name-one_1\\cover.png") ||
+            set.get_cover_art_path(1).ends_with("/test-name-one_1/cover.png") 
+        );assert!(
+            set.get_cover_art_path(2).ends_with("\\test-name-one_2\\cover.png") ||
+            set.get_cover_art_path(2).ends_with("/test-name-one_2/cover.png") 
         );
     }
         
@@ -488,13 +487,12 @@ mod test {
             vec!["www.rule_book_url.com".to_owned(), "www.rule_book_url2.com".to_owned()], 
             vec!["www.icon_url2.com".to_owned(), "www.icon_url3.com".to_owned()]
         );
-        assert_eq!(
-            set.get_rule_book_path(1),
-            format!("{}\\test-name-one_1\\rules.pdf", canonicalize("src/model/scraped_data").unwrap().to_string_lossy())
-        );
-        assert_eq!(
-            set.get_rule_book_path(2),
-            format!("{}\\test-name-one_2\\rules.pdf", canonicalize("src/model/scraped_data").unwrap().to_string_lossy())
+        assert!(
+            set.get_rule_book_path(1).ends_with("\\test-name-one_1\\rules.pdf") ||
+            set.get_rule_book_path(1).ends_with("/test-name-one_1/rules.pdf") 
+        );assert!(
+            set.get_rule_book_path(2).ends_with("\\test-name-one_2\\rules.pdf") ||
+            set.get_rule_book_path(2).ends_with("/test-name-one_2/rules.pdf") 
         );
     }
         
@@ -522,13 +520,12 @@ mod test {
             vec!["www.rule_book_url.com".to_owned(), "www.rule_book_url2.com".to_owned()], 
             vec!["www.icon_url2.com".to_owned(), "www.icon_url3.com".to_owned()]
         );
-        assert_eq!(
-            set.get_icon_path(1),
-            format!("{}\\test-name-one_1\\icon.png", canonicalize("src/model/scraped_data").unwrap().to_string_lossy())
-        );
-        assert_eq!(
-            set.get_icon_path(2),
-            format!("{}\\test-name-one_2\\icon.png", canonicalize("src/model/scraped_data").unwrap().to_string_lossy())
+        assert!(
+            set.get_icon_path(1).ends_with("\\test-name-one_1\\icon.png") ||
+            set.get_icon_path(1).ends_with("/test-name-one_1/icon.png") 
+        );assert!(
+            set.get_icon_path(2).ends_with("\\test-name-one_2\\icon.png") ||
+            set.get_icon_path(2).ends_with("/test-name-one_2/icon.png") 
         );
     }
         
