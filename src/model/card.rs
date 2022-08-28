@@ -16,9 +16,9 @@ pub struct Card {
     pub set_id: u8,
     pub editions: Vec<u8>,
     pub card_tags: Vec<CardTag>,
-    pub kindom_requirements: Vec<Vec<CardTag>>,
-    pub kindom_synergies: Vec<Vec<CardTag>>,
-    pub kindom_anti_synergies: Vec<Vec<CardTag>>,
+    pub kingdom_requirements: Vec<Vec<CardTag>>, // TODO KINg
+    pub kingdom_synergies: Vec<Vec<CardTag>>,
+    pub kingdom_anti_synergies: Vec<Vec<CardTag>>,
     pub card_types: Vec<CardType>,
     pub art_url: Vec<String>
 }
@@ -61,19 +61,18 @@ mod test {
             set_id: 0,
             editions: [1, 2].to_vec(),
             card_tags: [CardTag::Costs4].to_vec(),
-            kindom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
-            kindom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
-            kindom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
+            kingdom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
+            kingdom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
+            kingdom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
             card_types: [CardType::Action, CardType::Attack ,CardType::Curse].to_vec(),
             art_url: ["www.image1.com".to_string(), "www.image2.com".to_string()].to_vec()
-
         };
         let card_two = card_one.clone();
         card_one.id = 20;
         assert_ne!(card_one.id, card_two.id);
         assert_eq!(card_one.name, card_two.name);
         assert_eq!(card_one.basic_card, card_two.basic_card);
-        assert_eq!(card_one.kindom_anti_synergies, card_two.kindom_anti_synergies);
+        assert_eq!(card_one.kingdom_anti_synergies, card_two.kingdom_anti_synergies);
         assert_eq!(card_one.art_url, card_two.art_url);
     }
     
@@ -88,9 +87,9 @@ mod test {
             set_id: 0,
             editions: [1, 2].to_vec(),
             card_tags: [CardTag::Costs4].to_vec(),
-            kindom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
-            kindom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
-            kindom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
+            kingdom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
+            kingdom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
+            kingdom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
             card_types: [CardType::Action, CardType::Attack ,CardType::Curse].to_vec(),
             art_url: ["www.image1.com".to_string(), "www.image2.com".to_string()].to_vec()
         };
@@ -103,9 +102,9 @@ mod test {
             set_id: 2,
             editions: [2].to_vec(),
             card_tags: [CardTag::Costs4].to_vec(),
-            kindom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
-            kindom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
-            kindom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
+            kingdom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
+            kingdom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
+            kingdom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
             card_types: [CardType::Action, CardType::Attack ,CardType::Curse].to_vec(),
             art_url: ["www.image1.com".to_string(), "www.image2.com".to_string()].to_vec()
         };
@@ -125,9 +124,9 @@ mod test {
             set_id: 0,
             editions: [1, 2].to_vec(),
             card_tags: [CardTag::Costs4].to_vec(),
-            kindom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
-            kindom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
-            kindom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
+            kingdom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
+            kingdom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
+            kingdom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
             card_types: [CardType::Action, CardType::Attack ,CardType::Curse].to_vec(),
             art_url: ["www.image1.com".to_string(), "www.image2.com".to_string()].to_vec()
         };
@@ -140,9 +139,9 @@ mod test {
             set_id: 0,
             editions: [1, 2].to_vec(),
             card_tags: [CardTag::Costs4].to_vec(),
-            kindom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
-            kindom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
-            kindom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
+            kingdom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
+            kingdom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
+            kingdom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
             card_types: [CardType::Action, CardType::Attack ,CardType::Curse].to_vec(),
             art_url: ["www.image1.com".to_string(), "www.image2.com".to_string()].to_vec()
         };
@@ -161,9 +160,9 @@ mod test {
             set_id: 0,
             editions: [1, 2].to_vec(),
             card_tags: [CardTag::Costs4].to_vec(),
-            kindom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
-            kindom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
-            kindom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
+            kingdom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
+            kingdom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
+            kingdom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
             card_types: [CardType::Action, CardType::Attack ,CardType::Curse].to_vec(),
             art_url: ["www.image1.com".to_string(), "www.image2.com".to_string()].to_vec()
         };
@@ -176,9 +175,9 @@ mod test {
             set_id: 0,
             editions: [1, 2].to_vec(),
             card_tags: [CardTag::Costs4].to_vec(),
-            kindom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
-            kindom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
-            kindom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
+            kingdom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
+            kingdom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
+            kingdom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
             card_types: [CardType::Action, CardType::Attack ,CardType::Curse].to_vec(),
             art_url: ["www.image1.com".to_string(), "www.image2.com".to_string()].to_vec()
         };
@@ -197,9 +196,9 @@ mod test {
             set_id: 0,
             editions: [1, 2].to_vec(),
             card_tags: [CardTag::Costs4].to_vec(),
-            kindom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
-            kindom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
-            kindom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
+            kingdom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
+            kingdom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
+            kingdom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
             card_types: [CardType::Action, CardType::Attack ,CardType::Curse].to_vec(),
             art_url: ["www.image1.com".to_string(), "www.image2.com".to_string()].to_vec()
         };
@@ -212,9 +211,9 @@ mod test {
             set_id: 0,
             editions: [1, 2].to_vec(),
             card_tags: [CardTag::Costs4].to_vec(),
-            kindom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
-            kindom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
-            kindom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
+            kingdom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
+            kingdom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
+            kingdom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
             card_types: [CardType::Action, CardType::Attack ,CardType::Curse].to_vec(),
             art_url: ["www.image1.com".to_string(), "www.image2.com".to_string()].to_vec()
         };
@@ -233,9 +232,9 @@ mod test {
             set_id: 0,
             editions: [1, 2].to_vec(),
             card_tags: [CardTag::Costs4].to_vec(),
-            kindom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
-            kindom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
-            kindom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
+            kingdom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
+            kingdom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
+            kingdom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
             card_types: [CardType::Action, CardType::Attack ,CardType::Curse].to_vec(),
             art_url: ["www.image1.com".to_string(), "www.image2.com".to_string()].to_vec()
         };
@@ -248,9 +247,9 @@ mod test {
             set_id: 0,
             editions: [1, 2].to_vec(),
             card_tags: [CardTag::Costs4].to_vec(),
-            kindom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
-            kindom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
-            kindom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
+            kingdom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
+            kingdom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
+            kingdom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
             card_types: [CardType::Action, CardType::Attack ,CardType::Curse].to_vec(),
             art_url: ["www.image1.com".to_string(), "www.image2.com".to_string()].to_vec()
         };
@@ -269,9 +268,9 @@ mod test {
             set_id: 0,
             editions: [1, 2].to_vec(),
             card_tags: [CardTag::Costs4].to_vec(),
-            kindom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
-            kindom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
-            kindom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
+            kingdom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
+            kingdom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
+            kingdom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
             card_types: [CardType::Action, CardType::Attack ,CardType::Curse].to_vec(),
             art_url: ["www.image1.com".to_string(), "www.image2.com".to_string()].to_vec()
         };
@@ -284,9 +283,9 @@ mod test {
             set_id: 0,
             editions: [1, 2].to_vec(),
             card_tags: [CardTag::Costs4].to_vec(),
-            kindom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
-            kindom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
-            kindom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
+            kingdom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
+            kingdom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
+            kingdom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
             card_types: [CardType::Action, CardType::Attack ,CardType::Curse].to_vec(),
             art_url: ["www.image1.com".to_string(), "www.image2.com".to_string()].to_vec()
         };
@@ -305,9 +304,9 @@ mod test {
             set_id: 1,
             editions: [1, 2].to_vec(),
             card_tags: [CardTag::Costs4].to_vec(),
-            kindom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
-            kindom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
-            kindom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
+            kingdom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
+            kingdom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
+            kingdom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
             card_types: [CardType::Action, CardType::Attack ,CardType::Curse].to_vec(),
             art_url: ["www.image1.com".to_string(), "www.image2.com".to_string()].to_vec()
         };
@@ -320,9 +319,9 @@ mod test {
             set_id: 1,
             editions: [1, 2].to_vec(),
             card_tags: [CardTag::Costs4].to_vec(),
-            kindom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
-            kindom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
-            kindom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
+            kingdom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
+            kingdom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
+            kingdom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
             card_types: [CardType::Action, CardType::Attack ,CardType::Curse].to_vec(),
             art_url: ["www.image1.com".to_string(), "www.image2.com".to_string()].to_vec()
         };
@@ -341,9 +340,9 @@ mod test {
             set_id: 0,
             editions: [1, 2].to_vec(),
             card_tags: [CardTag::Costs4].to_vec(),
-            kindom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
-            kindom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
-            kindom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
+            kingdom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
+            kingdom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
+            kingdom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
             card_types: [CardType::Action, CardType::Attack ,CardType::Curse].to_vec(),
             art_url: ["www.image1.com".to_string(), "www.image2.com".to_string()].to_vec()
         };
@@ -356,9 +355,9 @@ mod test {
             set_id: 1,
             editions: [1, 2].to_vec(),
             card_tags: [CardTag::Costs4].to_vec(),
-            kindom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
-            kindom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
-            kindom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
+            kingdom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
+            kingdom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
+            kingdom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
             card_types: [CardType::Action, CardType::Attack ,CardType::Curse].to_vec(),
             art_url: ["www.image1.com".to_string(), "www.image2.com".to_string()].to_vec()
         };
@@ -377,9 +376,9 @@ mod test {
             set_id: 0,
             editions: [1].to_vec(),
             card_tags: [CardTag::Costs4].to_vec(),
-            kindom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
-            kindom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
-            kindom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
+            kingdom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
+            kingdom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
+            kingdom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
             card_types: [CardType::Action, CardType::Attack ,CardType::Curse].to_vec(),
             art_url: ["www.image1.com".to_string(), "www.image2.com".to_string()].to_vec()
         };
@@ -392,9 +391,9 @@ mod test {
             set_id: 0,
             editions: [1, 2].to_vec(),
             card_tags: [CardTag::Costs4].to_vec(),
-            kindom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
-            kindom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
-            kindom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
+            kingdom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
+            kingdom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
+            kingdom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
             card_types: [CardType::Action, CardType::Attack ,CardType::Curse].to_vec(),
             art_url: ["www.image1.com".to_string(), "www.image2.com".to_string()].to_vec()
         };
@@ -413,9 +412,9 @@ mod test {
             set_id: 0,
             editions: [1, 2].to_vec(),
             card_tags: [CardTag::WillGainBuy].to_vec(),
-            kindom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
-            kindom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
-            kindom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
+            kingdom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
+            kingdom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
+            kingdom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
             card_types: [CardType::Action, CardType::Attack ,CardType::Curse].to_vec(),
             art_url: ["www.image1.com".to_string(), "www.image2.com".to_string()].to_vec()
         };
@@ -428,9 +427,9 @@ mod test {
             set_id: 0,
             editions: [1, 2].to_vec(),
             card_tags: [CardTag::Costs4].to_vec(),
-            kindom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
-            kindom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
-            kindom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
+            kingdom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
+            kingdom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
+            kingdom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
             card_types: [CardType::Action, CardType::Attack ,CardType::Curse].to_vec(),
             art_url: ["www.image1.com".to_string(), "www.image2.com".to_string()].to_vec()
         };
@@ -439,7 +438,7 @@ mod test {
 
     #[test]
     #[allow(clippy::nonminimal_bool)]
-    fn test_eq_false_kindom_requirements() {
+    fn test_eq_false_kingdom_requirements() {
         let card_one = Card { 
             id: 1,
             name: "test name".to_string(),
@@ -449,9 +448,9 @@ mod test {
             set_id: 0,
             editions: [1, 2].to_vec(),
             card_tags: [CardTag::Costs4].to_vec(),
-            kindom_requirements: [[CardTag::AddCardToTopOfDeck, CardTag::CurseAttack].to_vec()].to_vec(),
-            kindom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
-            kindom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
+            kingdom_requirements: [[CardTag::AddCardToTopOfDeck, CardTag::CurseAttack].to_vec()].to_vec(),
+            kingdom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
+            kingdom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
             card_types: [CardType::Action, CardType::Attack ,CardType::Curse].to_vec(),
             art_url: ["www.image1.com".to_string(), "www.image2.com".to_string()].to_vec()
         };
@@ -464,9 +463,9 @@ mod test {
             set_id: 0,
             editions: [1, 2].to_vec(),
             card_tags: [CardTag::Costs4].to_vec(),
-            kindom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
-            kindom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
-            kindom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
+            kingdom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
+            kingdom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
+            kingdom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
             card_types: [CardType::Action, CardType::Attack ,CardType::Curse].to_vec(),
             art_url: ["www.image1.com".to_string(), "www.image2.com".to_string()].to_vec()
         };
@@ -485,9 +484,9 @@ mod test {
             set_id: 0,
             editions: [1, 2].to_vec(),
             card_tags: [CardTag::Costs4].to_vec(),
-            kindom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
-            kindom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
-            kindom_anti_synergies: [].to_vec(),
+            kingdom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
+            kingdom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
+            kingdom_anti_synergies: [].to_vec(),
             card_types: [CardType::Action, CardType::Attack ,CardType::Curse].to_vec(),
             art_url: ["www.image1.com".to_string(), "www.image2.com".to_string()].to_vec()
         };
@@ -500,9 +499,9 @@ mod test {
             set_id: 0,
             editions: [1, 2].to_vec(),
             card_tags: [CardTag::Costs4].to_vec(),
-            kindom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
-            kindom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
-            kindom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
+            kingdom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
+            kingdom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
+            kingdom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
             card_types: [CardType::Action, CardType::Attack ,CardType::Curse].to_vec(),
             art_url: ["www.image1.com".to_string(), "www.image2.com".to_string()].to_vec()
         };
@@ -521,9 +520,9 @@ mod test {
             set_id: 0,
             editions: [1, 2].to_vec(),
             card_tags: [CardTag::Costs4].to_vec(),
-            kindom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
-            kindom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
-            kindom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
+            kingdom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
+            kingdom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
+            kingdom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
             card_types: [CardType::Action, CardType::Attack ,CardType::Curse].to_vec(),
             art_url: ["www.image1.com".to_string(), "www.image2.com".to_string()].to_vec()
         };
@@ -536,9 +535,9 @@ mod test {
             set_id: 0,
             editions: [1, 2].to_vec(),
             card_tags: [CardTag::Costs4].to_vec(),
-            kindom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
-            kindom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
-            kindom_anti_synergies: [].to_vec(),
+            kingdom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
+            kingdom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
+            kingdom_anti_synergies: [].to_vec(),
             card_types: [CardType::Action, CardType::Attack ,CardType::Curse].to_vec(),
             art_url: ["www.image1.com".to_string(), "www.image2.com".to_string()].to_vec()
         };
@@ -557,9 +556,9 @@ mod test {
             set_id: 0,
             editions: [1, 2].to_vec(),
             card_tags: [CardTag::Costs4].to_vec(),
-            kindom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
-            kindom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
-            kindom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
+            kingdom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
+            kingdom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
+            kingdom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
             card_types: [CardType::Action, CardType::Attack ,CardType::Curse].to_vec(),
             art_url: ["www.image1.com".to_string(), "www.image2.com".to_string()].to_vec()
         };
@@ -572,9 +571,9 @@ mod test {
             set_id: 0,
             editions: [1, 2].to_vec(),
             card_tags: [CardTag::Costs4].to_vec(),
-            kindom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
-            kindom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
-            kindom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
+            kingdom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
+            kingdom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
+            kingdom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
             card_types: [CardType::Reaction, CardType::Action ,CardType::Victory].to_vec(),
             art_url: ["www.image1.com".to_string(), "www.image2.com".to_string()].to_vec()
         };
@@ -593,9 +592,9 @@ mod test {
             set_id: 0,
             editions: [1, 2].to_vec(),
             card_tags: [CardTag::Costs4].to_vec(),
-            kindom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
-            kindom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
-            kindom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
+            kingdom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
+            kingdom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
+            kingdom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
             card_types: [CardType::Action, CardType::Attack ,CardType::Curse].to_vec(),
             art_url: ["www.image4.com".to_string(), "www.image2.com".to_string()].to_vec()
         };
@@ -608,9 +607,9 @@ mod test {
             set_id: 0,
             editions: [1, 2].to_vec(),
             card_tags: [CardTag::Costs4].to_vec(),
-            kindom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
-            kindom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
-            kindom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
+            kingdom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
+            kingdom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
+            kingdom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
             card_types: [CardType::Action, CardType::Attack ,CardType::Curse].to_vec(),
             art_url: ["www.image1.com".to_string(), "www.image2.com".to_string()].to_vec()
         };
@@ -629,9 +628,9 @@ mod test {
             set_id: 0,
             editions: [1, 2].to_vec(),
             card_tags: [CardTag::Costs4].to_vec(),
-            kindom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
-            kindom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
-            kindom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
+            kingdom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
+            kingdom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
+            kingdom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
             card_types: [CardType::Action, CardType::Attack ,CardType::Curse].to_vec(),
             art_url: ["www.image1.com".to_string(), "www.image2.com".to_string()].to_vec()
         };
@@ -639,7 +638,7 @@ mod test {
         
         assert_eq!(
             json,
-            "{\"id\":1,\"name\":\"test name\",\"supply_card\":true,\"basic_card\":false,\"card_counts\":[10,10,10,10,10],\"set_id\":0,\"editions\":[1,2],\"card_tags\":[\"Costs4\"],\"kindom_requirements\":[[\"AddCardToTopOfDeck\"]],\"kindom_synergies\":[[\"CanReplaceAction\"]],\"kindom_anti_synergies\":[[\"WillReplaceAction\"]],\"card_types\":[\"Action\",\"Attack\",\"Curse\"],\"art_url\":[\"www.image1.com\",\"www.image2.com\"]}");
+            "{\"id\":1,\"name\":\"test name\",\"supply_card\":true,\"basic_card\":false,\"card_counts\":[10,10,10,10,10],\"set_id\":0,\"editions\":[1,2],\"card_tags\":[\"Costs4\"],\"kingdom_requirements\":[[\"AddCardToTopOfDeck\"]],\"kindom_synergies\":[[\"CanReplaceAction\"]],\"kindom_anti_synergies\":[[\"WillReplaceAction\"]],\"card_types\":[\"Action\",\"Attack\",\"Curse\"],\"art_url\":[\"www.image1.com\",\"www.image2.com\"]}");
     }
 
     #[test]
@@ -654,13 +653,13 @@ mod test {
             set_id: 0,
             editions: [1, 2].to_vec(),
             card_tags: [CardTag::Costs4].to_vec(),
-            kindom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
-            kindom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
-            kindom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
+            kingdom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
+            kingdom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
+            kingdom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
             card_types: [CardType::Action, CardType::Attack ,CardType::Curse].to_vec(),
             art_url: ["www.image1.com".to_string(), "www.image2.com".to_string()].to_vec()
         };
-        let json = "{\"id\":1,\"name\":\"test name\",\"supply_card\":true,\"basic_card\":false,\"card_counts\":[10,10,10,10,10],\"set_id\":0,\"editions\":[1,2],\"card_tags\":[\"Costs4\"],\"kindom_requirements\":[[\"AddCardToTopOfDeck\"]],\"kindom_synergies\":[[\"CanReplaceAction\"]],\"kindom_anti_synergies\":[[\"WillReplaceAction\"]],\"card_types\":[\"Action\",\"Attack\",\"Curse\"],\"art_url\":[\"www.image1.com\",\"www.image2.com\"]}";
+        let json = "{\"id\":1,\"name\":\"test name\",\"supply_card\":true,\"basic_card\":false,\"card_counts\":[10,10,10,10,10],\"set_id\":0,\"editions\":[1,2],\"card_tags\":[\"Costs4\"],\"kingdom_requirements\":[[\"AddCardToTopOfDeck\"]],\"kindom_synergies\":[[\"CanReplaceAction\"]],\"kindom_anti_synergies\":[[\"WillReplaceAction\"]],\"card_types\":[\"Action\",\"Attack\",\"Curse\"],\"art_url\":[\"www.image1.com\",\"www.image2.com\"]}";
         let json_set: Card = serde_json::from_str(json).unwrap();
 
         assert_eq!(json_set, card);
@@ -677,15 +676,15 @@ mod test {
             set_id: 0,
             editions: [1, 2].to_vec(),
             card_tags: [CardTag::Costs4].to_vec(),
-            kindom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
-            kindom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
-            kindom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
+            kingdom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
+            kingdom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
+            kingdom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
             card_types: [CardType::Action, CardType::Attack ,CardType::Curse].to_vec(),
             art_url: ["www.image1.com".to_string(), "www.image2.com".to_string()].to_vec()
         };
         assert_eq!(
             format!("{card:?}"), 
-            "Card { id: 1, name: \"test name\", supply_card: true, basic_card: false, card_counts: [10, 10, 10, 10, 10], set_id: 0, editions: [1, 2], card_tags: [Costs4], kindom_requirements: [[AddCardToTopOfDeck]], kindom_synergies: [[CanReplaceAction]], kindom_anti_synergies: [[WillReplaceAction]], card_types: [Action, Attack, Curse], art_url: [\"www.image1.com\", \"www.image2.com\"] }");
+            "Card { id: 1, name: \"test name\", supply_card: true, basic_card: false, card_counts: [10, 10, 10, 10, 10], set_id: 0, editions: [1, 2], card_tags: [Costs4], kingdom_requirements: [[AddCardToTopOfDeck]], kindom_synergies: [[CanReplaceAction]], kindom_anti_synergies: [[WillReplaceAction]], card_types: [Action, Attack, Curse], art_url: [\"www.image1.com\", \"www.image2.com\"] }");
     }
 
     #[test]
@@ -699,9 +698,9 @@ mod test {
             set_id: 0,
             editions: [1, 2].to_vec(),
             card_tags: [CardTag::Costs4].to_vec(),
-            kindom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
-            kindom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
-            kindom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
+            kingdom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
+            kingdom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
+            kingdom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
             card_types: [CardType::Action, CardType::Attack ,CardType::Curse].to_vec(),
             art_url: ["www.image1.com".to_string(), "www.image2.com".to_string()].to_vec()
         };
@@ -728,9 +727,9 @@ mod test {
             set_id: 0,
             editions: [1, 2].to_vec(),
             card_tags: [CardTag::Costs4].to_vec(),
-            kindom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
-            kindom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
-            kindom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
+            kingdom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
+            kingdom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
+            kingdom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
             card_types: [CardType::Action, CardType::Attack ,CardType::Curse].to_vec(),
             art_url: ["www.image1.com".to_string(), "www.image2.com".to_string()].to_vec()
         };
