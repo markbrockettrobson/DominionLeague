@@ -638,7 +638,7 @@ mod test {
         
         assert_eq!(
             json,
-            "{\"id\":1,\"name\":\"test name\",\"supply_card\":true,\"basic_card\":false,\"card_counts\":[10,10,10,10,10],\"set_id\":0,\"editions\":[1,2],\"card_tags\":[\"Costs4\"],\"kingdom_requirements\":[[\"AddCardToTopOfDeck\"]],\"kindom_synergies\":[[\"CanReplaceAction\"]],\"kindom_anti_synergies\":[[\"WillReplaceAction\"]],\"card_types\":[\"Action\",\"Attack\",\"Curse\"],\"art_url\":[\"www.image1.com\",\"www.image2.com\"]}");
+            "{\"id\":1,\"name\":\"test name\",\"supply_card\":true,\"basic_card\":false,\"card_counts\":[10,10,10,10,10],\"set_id\":0,\"editions\":[1,2],\"card_tags\":[\"Costs4\"],\"kingdom_requirements\":[[\"AddCardToTopOfDeck\"]],\"kingdom_synergies\":[[\"CanReplaceAction\"]],\"kingdom_anti_synergies\":[[\"WillReplaceAction\"]],\"card_types\":[\"Action\",\"Attack\",\"Curse\"],\"art_url\":[\"www.image1.com\",\"www.image2.com\"]}");
     }
 
     #[test]
@@ -659,7 +659,7 @@ mod test {
             card_types: [CardType::Action, CardType::Attack ,CardType::Curse].to_vec(),
             art_url: ["www.image1.com".to_string(), "www.image2.com".to_string()].to_vec()
         };
-        let json = "{\"id\":1,\"name\":\"test name\",\"supply_card\":true,\"basic_card\":false,\"card_counts\":[10,10,10,10,10],\"set_id\":0,\"editions\":[1,2],\"card_tags\":[\"Costs4\"],\"kingdom_requirements\":[[\"AddCardToTopOfDeck\"]],\"kindom_synergies\":[[\"CanReplaceAction\"]],\"kindom_anti_synergies\":[[\"WillReplaceAction\"]],\"card_types\":[\"Action\",\"Attack\",\"Curse\"],\"art_url\":[\"www.image1.com\",\"www.image2.com\"]}";
+        let json = "{\"id\":1,\"name\":\"test name\",\"supply_card\":true,\"basic_card\":false,\"card_counts\":[10,10,10,10,10],\"set_id\":0,\"editions\":[1,2],\"card_tags\":[\"Costs4\"],\"kingdom_requirements\":[[\"AddCardToTopOfDeck\"]],\"kingdom_synergies\":[[\"CanReplaceAction\"]],\"kingdom_anti_synergies\":[[\"WillReplaceAction\"]],\"card_types\":[\"Action\",\"Attack\",\"Curse\"],\"art_url\":[\"www.image1.com\",\"www.image2.com\"]}";
         let json_set: Card = serde_json::from_str(json).unwrap();
 
         assert_eq!(json_set, card);
@@ -684,7 +684,7 @@ mod test {
         };
         assert_eq!(
             format!("{card:?}"), 
-            "Card { id: 1, name: \"test name\", supply_card: true, basic_card: false, card_counts: [10, 10, 10, 10, 10], set_id: 0, editions: [1, 2], card_tags: [Costs4], kingdom_requirements: [[AddCardToTopOfDeck]], kindom_synergies: [[CanReplaceAction]], kindom_anti_synergies: [[WillReplaceAction]], card_types: [Action, Attack, Curse], art_url: [\"www.image1.com\", \"www.image2.com\"] }");
+            "Card { id: 1, name: \"test name\", supply_card: true, basic_card: false, card_counts: [10, 10, 10, 10, 10], set_id: 0, editions: [1, 2], card_tags: [Costs4], kingdom_requirements: [[AddCardToTopOfDeck]], kingdom_synergies: [[CanReplaceAction]], kingdom_anti_synergies: [[WillReplaceAction]], card_types: [Action, Attack, Curse], art_url: [\"www.image1.com\", \"www.image2.com\"] }");
     }
 
     #[test]
