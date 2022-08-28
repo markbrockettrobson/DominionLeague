@@ -20,7 +20,6 @@ mod test {
     #[test]
     fn test_get_cards_vec_loads_at_least_one_set() {
         let cards = get_card_vec();
-        println!("{:?}", cards.clone()[0]);
         assert_eq!(cards[0].id, 0);
     }
 

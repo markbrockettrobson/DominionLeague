@@ -39,7 +39,7 @@ mod test {
             set_id: 0,
             editions: [13, 21].to_vec(),
             card_tags: [CardTag::Costs4].to_vec(),
-            kindom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
+            kingdom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
             kingdom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
             kingdom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
             card_types: [CardType::Action, CardType::Attack ,CardType::Curse].to_vec(),
