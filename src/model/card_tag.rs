@@ -3,16 +3,21 @@ use rocket::serde::{Deserialize, Serialize};
 #[derive(Debug, Clone, Copy, Eq, PartialEq, Deserialize, Serialize)]
 #[serde(crate = "rocket::serde")]
 pub enum CardTag{
+    //Action
     CanReplaceAction,
     WillReplaceAction,
     CanGainAction,
     WillGainAction,
+
+    //Cards in hand
     CanReplaceCard,
     WillReplaceCard,
     CanGainCard,
     WillGainCard,
     CanDiscardCard,
     WillDiscardCard,
+
+    //Gains Cards
     WillGainCardUnder4,
     WillGainCardToHandUnder4,
     WillGainCardUnder5,
@@ -23,23 +28,30 @@ pub enum CardTag{
     WillGainCardToHandOver5,
     GainGold,
     GainSilver,
+    
+    //Trashing
     TrashFromHand,
     TrashMultipleFromHand,
-    CanGainBuy,
-    WillGainBuy,
-    CanGainCoin,
-    WillGainCoin,
-    WillGainVictory,
     TrashForBenefit,
     TrashToGain,
     TrashTreasre,
     TrashAction,
     TrashVictory,
+    TrashFromDeck,
+    
+    //Buys
+    CanGainBuy,
+    WillGainBuy,
+    
+    //Coin
+    CanGainCoin,
+    WillGainCoin,
+    
+    //Miss
     ProtectionFromAttack,
     WeakerForEmptySupply,
     StrongerForEmptySuppy,
     DiscardFromDeck,
-    TrashFromDeck,
     UsesActionInHand,
     
     //Controls Deck Order
@@ -60,6 +72,7 @@ pub enum CardTag{
     Costs5,
     Costs6,
     Costs7,
+    Costs8,
 
     //Card types
     IsAction,
@@ -67,7 +80,12 @@ pub enum CardTag{
     IsVictory,
     IsCurse,
     IsAttack,
-    IsReaction
+    IsReaction,
+
+    //Specific card 
+    IsCopper,
+    IsSilver,
+    IsGold
 }
 
 
