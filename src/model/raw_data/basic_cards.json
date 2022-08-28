@@ -1,0 +1,155 @@
+[
+    {
+        "id": 0,
+        "name": "Copper",
+        "supply_card": true,
+        "basic_card": true,
+        "card_counts": [60,60,60,80,80],
+        "set_id": 0,
+        "editions": [1, 2],
+        "card_tags": [
+            "IsTreasure",
+            "Costs0",
+            "IsCopper",
+            "WillGainCoin"
+        ],
+        "kingdom_requirements": [],
+        "kingdom_synergies": [],
+        "kingdom_anti_synergies": [],
+        "card_types": ["Treasure"],
+        "art_url": [
+            "http://wiki.dominionstrategy.com/images/archive/f/fb/20161006135528%21Copper.jpg", 
+            "http://wiki.dominionstrategy.com/images/f/fb/Copper.jpg"
+        ]
+    },
+    {
+        "id": 1,
+        "name": "Curse",
+        "supply_card": true,
+        "basic_card": true,
+        "card_counts": [10,20,30,40,50],
+        "set_id": 0,
+        "editions": [1, 2],
+        "card_tags": [
+            "IsCurse",
+            "Costs0"
+        ],
+        "kingdom_requirements": [],
+        "kingdom_synergies": [],
+        "kingdom_anti_synergies": [],
+        "card_types": ["Curse"],
+        "art_url": [
+            "http://wiki.dominionstrategy.com/images/archive/9/97/20161006140209%21Curse.jpg", 
+            "http://wiki.dominionstrategy.com/images/9/97/Curse.jpg"
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Estate",
+        "supply_card": true,
+        "basic_card": true,
+        "card_counts": [8,12,12,12,12],
+        "set_id": 0,
+        "editions": [1, 2],
+        "card_tags": [
+            "IsVictory",
+            "Costs2"
+        ],
+        "kingdom_requirements": [],
+        "kingdom_synergies": [],
+        "kingdom_anti_synergies": [],
+        "card_types": ["Victory"],
+        "art_url": [
+            "http://wiki.dominionstrategy.com/images/archive/9/91/20161006141323%21Estate.jpg", 
+            "http://wiki.dominionstrategy.com/images/9/91/Estate.jpg"
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Silver",
+        "supply_card": true,
+        "basic_card": true,
+        "card_counts": [40,40,40,70,70],
+        "set_id": 0,
+        "editions": [1, 2],
+        "card_tags": [
+            "IsTreasure",
+            "Costs3",
+            "IsSilver",
+            "WillGainCoin"
+        ],
+        "kingdom_requirements": [],
+        "kingdom_synergies": [],
+        "kingdom_anti_synergies": [],
+        "card_types": ["Treasure"],
+        "art_url": [
+            "http://wiki.dominionstrategy.com/images/archive/5/5d/20161006143824%21Silver.jpg", 
+            "http://wiki.dominionstrategy.com/images/5/5d/Silver.jpg"
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Duchy",
+        "supply_card": true,
+        "basic_card": true,
+        "card_counts": [8,12,12,12,12],
+        "set_id": 0,
+        "editions": [1, 2],
+        "card_tags": [
+            "IsVictory",
+            "Costs5"
+        ],
+        "kingdom_requirements": [],
+        "kingdom_synergies": [],
+        "kingdom_anti_synergies": [],
+        "card_types": ["Victory"],
+        "art_url": [
+            "http://wiki.dominionstrategy.com/images/archive/4/4a/20161006142139%21Duchy.jpg", 
+            "http://wiki.dominionstrategy.com/images/4/4a/Duchy.jpg"
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Gold",
+        "supply_card": true,
+        "basic_card": true,
+        "card_counts": [30,30,30,48,48],
+        "set_id": 0,
+        "editions": [1, 2],
+        "card_tags": [
+            "IsTreasure",
+            "Costs5",
+            "IsGold",
+            "WillGainCoin"
+        ],
+        "kingdom_requirements": [],
+        "kingdom_synergies": [],
+        "kingdom_anti_synergies": [],
+        "card_types": ["Treasure"],
+        "art_url": [
+            "http://wiki.dominionstrategy.com/images/archive/5/50/20161006144222%21Gold.jpg", 
+            "http://wiki.dominionstrategy.com/images/5/50/Gold.jpg"
+        ]
+    },
+    {
+        "id": 6,
+        "name": "Province",
+        "supply_card": true,
+        "basic_card": true,
+        "card_counts": [8,12,12,15,18],
+        "set_id": 0,
+        "editions": [1, 2],
+        "card_tags": [
+            "IsVictory",
+            "Costs8"
+        ],
+        "kingdom_requirements": [],
+        "kingdom_synergies": [],
+        "kingdom_anti_synergies": [],
+        "card_types": ["Victory"],
+        "art_url": [
+            "http://wiki.dominionstrategy.com/images/archive/8/81/20161006142435%21Province.jpg", 
+            "http://wiki.dominionstrategy.com/images/8/81/Province.jpg"
+        ]
+    }
+]
