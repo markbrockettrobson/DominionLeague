@@ -1,6 +1,6 @@
 [
     {
-        "id": 0,
+        "id": 1,
         "name": "Dominion",
         "editions": [1, 2],
         "cover_art_url": [
@@ -17,7 +17,7 @@
         ]
     },
     {
-        "id": 1,
+        "id": 2,
         "name": "Intrigue",
         "editions": [1, 2],
         "cover_art_url": [
@@ -34,7 +34,7 @@
         ]
     },
     {
-        "id": 2,
+        "id": 3,
         "name": "Seaside",
         "editions": [1, 2],
         "cover_art_url": [
@@ -51,7 +51,7 @@
         ]
     },
     {
-        "id": 3,
+        "id": 4,
         "name": "Alchemy",
         "editions": [1],
         "cover_art_url": [
@@ -65,7 +65,7 @@
         ]
     },
     {
-        "id": 4,
+        "id": 5,
         "name": "Prosperity",
         "editions": [1, 2],
         "cover_art_url": [
@@ -82,7 +82,7 @@
         ]
     },
     {
-        "id": 5,
+        "id": 6,
         "name": "Cornucopia",
         "editions": [1],
         "cover_art_url": [
@@ -96,7 +96,7 @@
         ]
     },
     {
-        "id": 6,
+        "id": 7,
         "name": "Hinterlands",
         "editions": [1, 2],
         "cover_art_url": [
@@ -113,7 +113,7 @@
         ]
     },
     {
-        "id": 7,
+        "id": 8,
         "name": "Dark Ages",
         "editions": [1],
         "cover_art_url": [
@@ -127,7 +127,7 @@
         ]
     },
     {
-        "id": 8,
+        "id": 9,
         "name": "Guilds",
         "editions": [1],
         "cover_art_url": [
@@ -141,7 +141,7 @@
         ]
     },
     {
-        "id": 9,
+        "id": 10,
         "name": "Adventures",
         "editions": [1],
         "cover_art_url": [
@@ -155,7 +155,7 @@
         ]
     },
     {
-        "id": 10,
+        "id": 11,
         "name": "Empires",
         "editions": [1],
         "cover_art_url": [
@@ -169,7 +169,7 @@
         ]
     },
     {
-        "id": 11,
+        "id": 12,
         "name": "Nocturne",
         "editions": [1],
         "cover_art_url": [
@@ -183,7 +183,7 @@
         ]
     },
     {
-        "id": 12,
+        "id": 13,
         "name": "Renaissance",
         "editions": [1],
         "cover_art_url": [
@@ -197,7 +197,7 @@
         ]
     },
     {
-        "id": 13,
+        "id": 14,
         "name": "Menagerie",
         "editions": [1],
         "cover_art_url": [
@@ -211,7 +211,7 @@
         ]
     },
     {
-        "id": 14,
+        "id": 15,
         "name": "Allies",
         "editions": [1],
         "cover_art_url": [
