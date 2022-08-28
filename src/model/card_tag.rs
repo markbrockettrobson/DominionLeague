@@ -3,7 +3,6 @@ use rocket::serde::{Deserialize, Serialize};
 #[derive(Debug, Clone, Copy, Eq, PartialEq, Deserialize, Serialize)]
 #[serde(crate = "rocket::serde")]
 pub enum CardTag{
-    CostsAction,
     CanReplaceAction,
     WillReplaceAction,
     CanGainAction,
@@ -22,11 +21,8 @@ pub enum CardTag{
     WillGainCardToHandOver4,
     WillGainCardOver5,
     WillGainCardToHandOver5,
-    AddCardToTopOfDeck,
     GainGold,
     GainSilver,
-    TrashingAttack,
-    DiscardingAttack,
     TrashFromHand,
     TrashMultipleFromHand,
     CanGainBuy,
@@ -44,9 +40,34 @@ pub enum CardTag{
     StrongerForEmptySuppy,
     DiscardFromDeck,
     TrashFromDeck,
-    RequiresActionInHand,
-    RequirsTopOfDeck,
-    CurseAttack,    
+    UsesActionInHand,
+    
+    //Controls Deck Order
+    ControlsTopOfDeck,
+    AddCardToTopOfDeck,
+
+    //Attack type
+    CurseAttack,
+    TrashingAttack,
+    DiscardingAttack,
+
+    //Card costs
+    Costs0,
+    Costs1,
+    Costs2,
+    Costs3,
+    Costs4,
+    Costs5,
+    Costs6,
+    Costs7,
+
+    //Card types
+    IsAction,
+    IsTreasure,
+    IsVictory,
+    IsCurse,
+    IsAttack,
+    IsReaction
 }
 
 
