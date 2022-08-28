@@ -32,7 +32,7 @@ mod test {
     use super::scrape_set_files;
 
     #[tokio::test]
-    async fn test_get_icon_path() {
+    async fn test_scrape_set_files() {
         let _ = remove_dir_all("src\\model\\scraped_data\\test-name-one_13");
         let _ = remove_dir_all("src\\model\\scraped_data\\test-name-one_21");
         let logo_url = "https://github.githubassets.com/favicons/favicon.svg";
