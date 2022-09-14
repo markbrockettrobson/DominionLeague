@@ -99,7 +99,7 @@ mod test {
     fn test_clone() {
         let mut card_tag_one = CardTag::CanDiscardCard;
         let card_tag_two = card_tag_one.clone();
-        card_tag_one = CardTag::IsSilver;
+        card_tag_one = CardTag::WillGainCardUnder4;
         assert_ne!(card_tag_one, card_tag_two);
         assert_eq!(card_tag_two, CardTag::CanDiscardCard);
     }
