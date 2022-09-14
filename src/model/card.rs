@@ -8,7 +8,7 @@ use super::{card_type::CardType, card_tag::CardTag};
 #[derive(Debug, Clone, Eq, PartialEq, Deserialize, Serialize)]
 #[serde(crate = "rocket::serde")]
 pub struct Card {
-    pub id: u8,
+    pub id: u16,
     pub name: String,
     pub supply_card: bool,
     pub basic_card: bool,
