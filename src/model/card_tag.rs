@@ -12,23 +12,26 @@ pub enum CardTag{
     //Cards in hand
     CanReplaceCard,
     WillReplaceCard,
-    CanGainCard,
-    WillGainCard,
+    CanDrawCard,
+    NetGainCards,
+    NetLoseCards,
+
+    //Discard
     CanDiscardCard,
     WillDiscardCard,
+    DiscardFromDeck,
 
     //Gains Cards
+    WillGainCard,
     WillGainCardUnder4,
     WillGainCardToHandUnder4,
     WillGainCardUnder5,
     WillGainCardToHandUnder5,
-    WillGainCardOver4,
-    WillGainCardToHandOver4,
-    WillGainCardOver5,
-    WillGainCardToHandOver5,
     GainGold,
     GainSilver,
+    GainCopper,
     
+
     //Trashing
     TrashFromHand,
     TrashMultipleFromHand,
@@ -37,6 +40,8 @@ pub enum CardTag{
     TrashTreasre,
     TrashAction,
     TrashVictory,
+    TrashCurse,
+    TrashSelf,
     TrashFromDeck,
     
     //Buys
@@ -51,7 +56,6 @@ pub enum CardTag{
     ProtectionFromAttack,
     WeakerForEmptySupply,
     StrongerForEmptySuppy,
-    DiscardFromDeck,
     UsesActionInHand,
     
     //Controls Deck Order
@@ -62,6 +66,7 @@ pub enum CardTag{
     CurseAttack,
     TrashingAttack,
     DiscardingAttack,
+    DiscardToTopOfDeckAttack,
 
     //Card costs
     Costs0,
@@ -81,11 +86,6 @@ pub enum CardTag{
     IsCurse,
     IsAttack,
     IsReaction,
-
-    //Specific card 
-    IsCopper,
-    IsSilver,
-    IsGold
 }
 
 
@@ -99,7 +99,7 @@ mod test {
     fn test_clone() {
         let mut card_tag_one = CardTag::CanDiscardCard;
         let card_tag_two = card_tag_one.clone();
-        card_tag_one = CardTag::CanGainCard;
+        card_tag_one = CardTag::IsSilver;
         assert_ne!(card_tag_one, card_tag_two);
         assert_eq!(card_tag_two, CardTag::CanDiscardCard);
     }
