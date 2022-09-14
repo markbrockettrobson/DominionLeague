@@ -3,14 +3,20 @@
 pub mod endpoints;
 pub mod model;
 
+use model::state::card_data::build_card_data;
 use rocket::{Rocket, Build, build};
 
-use crate::endpoints::health::health;
+use crate::endpoints::{ 
+    health::health, 
+    card_json_from_id::card_json_from_id, 
+    card_json_from_name::card_json_from_name };
 
 #[launch]
 #[mutants::skip]
 fn launch_app() -> Rocket<Build> {
-    build().mount("/", routes![health])
+    build()
+    .manage(build_card_data())
+    .mount("/", routes![health, card_json_from_id, card_json_from_name])
 }
 
 #[cfg(test)]
