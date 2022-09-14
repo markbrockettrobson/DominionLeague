@@ -20,7 +20,7 @@ mod test {
     #[test]
     fn test_get_set_vec_loads_at_least_one_set() {
         let sets = get_set_vec();
-        assert_eq!(sets[0].id, 0);
+        assert_eq!(sets[0].id, 1);
         assert_eq!(sets[0].name, "Dominion");
         assert_eq!(sets[0].editions, vec![1, 2]);
         assert_eq!(sets[0].cover_art_url.len(), 2);
@@ -32,7 +32,7 @@ mod test {
     fn test_no_missing_set_id() {
         let sets = get_set_vec();
         for (index, set) in sets.iter().enumerate() {
-            assert_eq!(set.id, index as u8);
+            assert_eq!(set.id, (index + 1) as u8);
         }
     }
 }

@@ -1,14 +1,14 @@
 pub mod model;
 
 use self::model::data_loaders::set_data_loader::get_set_vec;
-use self::model::data_loaders::card_data_loader::get_card_vec;
+use self::model::data_loaders::card_data_loader::get_all_card_vec;
 use self::model::scrapers::scrape_set_files::scrape_set_files;
 use self::model::scrapers::scrape_card_files::scrape_card_files;
 
 
 #[mutants::skip]
 #[allow(dead_code)]
-async fn get_all_sets(){
+async fn get_all_set_files(){
     println!("Reading Sets...");
     let sets = get_set_vec();
     println!("Loaded {} sets", sets.len());
@@ -26,9 +26,9 @@ async fn get_all_sets(){
 
 #[mutants::skip]
 #[allow(dead_code)]
-async fn get_all_cards(){
+async fn get_all_card_files(){
     println!("Reading cards...");
-    let cards = get_card_vec();
+    let cards = get_all_card_vec();
     println!("Loaded {} cards", cards.len());
     let mut card_count: u8 = 0; 
     for card in cards.clone(){
@@ -47,5 +47,6 @@ async fn get_all_cards(){
 #[allow(dead_code)]
 #[tokio::main]
 async fn main() {
-    get_all_cards().await;
+    //get_all_set_files().await;
+    get_all_card_files().await;
 }
