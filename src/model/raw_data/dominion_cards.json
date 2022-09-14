@@ -1,0 +1,759 @@
+[
+    {
+        "id": 100,
+        "name": "Cellar",
+        "supply_card": true,
+        "basic_card": false,
+        "card_counts": [10,10,10,10,10],
+        "set_id": 1,
+        "editions": [1, 2],
+        "card_tags": [
+            "IsAction",
+            "Costs2",
+            "WillReplaceAction",
+            "CanDiscardCard",
+            "NetLoseCards"
+        ],
+        "kingdom_requirements": [],
+        "kingdom_synergies": [["CurseAttack"]],
+        "kingdom_anti_synergies": [],
+        "card_types": ["Action"],
+        "art_url": [
+            "http://wiki.dominionstrategy.com/images/archive/1/1c/20161006150043%21Cellar.jpg", 
+            "http://wiki.dominionstrategy.com/images/1/1c/Cellar.jpg"
+        ]
+    },
+    {
+        "id": 101,
+        "name": "Chapel",
+        "supply_card": true,
+        "basic_card": false,
+        "card_counts": [10,10,10,10,10],
+        "set_id": 1,
+        "editions": [1, 2],
+        "card_tags": [
+            "IsAction",
+            "Costs2",
+            "NetLoseCards",
+            "TrashFromHand",
+            "TrashMultipleFromHand",
+            "TrashTreasre",
+            "TrashAction",
+            "TrashVictory",
+            "TrashCurse"
+        ],
+        "kingdom_requirements": [],
+        "kingdom_synergies": [],
+        "kingdom_anti_synergies": [],
+        "card_types": ["Action"],
+        "art_url": [
+            "http://wiki.dominionstrategy.com/images/archive/2/29/20161006150258%21Chapel.jpg", 
+            "http://wiki.dominionstrategy.com/images/2/29/Chapel.jpg"
+        ]
+    },
+    {
+        "id": 102,
+        "name": "Moat",
+        "supply_card": true,
+        "basic_card": false,
+        "card_counts": [10,10,10,10,10],
+        "set_id": 1,
+        "editions": [1, 2],
+        "card_tags": [
+            "IsAction",
+            "IsReaction",
+            "Costs2",
+            "WillReplaceCard",
+            "NetGainCards",
+            "ProtectionFromAttack"
+        ],
+        "kingdom_requirements": [["IsAttack"]],
+        "kingdom_synergies": [],
+        "kingdom_anti_synergies": [],
+        "card_types": ["Action", "Reaction"],
+        "art_url": [
+            "http://wiki.dominionstrategy.com/images/archive/f/fe/20161006154558%21Moat.jpg", 
+            "http://wiki.dominionstrategy.com/images/f/fe/Moat.jpg"
+        ]
+    },
+    {
+        "id": 103,
+        "name": "Chancellor",
+        "supply_card": true,
+        "basic_card": false,
+        "card_counts": [10,10,10,10,10],
+        "set_id": 1,
+        "editions": [1],
+        "card_tags": [
+            "IsAction",
+            "Costs3",
+            "WillGainCoin",
+            "CanDiscardCard",
+            "DiscardFromDeck"
+        ],
+        "kingdom_requirements": [],
+        "kingdom_synergies": [],
+        "kingdom_anti_synergies": [],
+        "card_types": ["Action"],
+        "art_url": [
+            "http://wiki.dominionstrategy.com/images/b/b7/Chancellor.jpg"
+        ]
+    },
+    {
+        "id": 104,
+        "name": "Harbinger",
+        "supply_card": true,
+        "basic_card": false,
+        "card_counts": [10,10,10,10,10],
+        "set_id": 1,
+        "editions": [2],
+        "card_tags": [
+            "IsAction",
+            "Costs3",
+            "WillReplaceAction",
+            "WillReplaceCard",
+            "ControlsTopOfDeck",
+            "AddCardToTopOfDeck"
+        ],
+        "kingdom_requirements": [],
+        "kingdom_synergies": [["CanDiscardCard"], ["DiscardFromDeck"]],
+        "kingdom_anti_synergies": [],
+        "card_types": ["Action"],
+        "art_url": [
+            "http://wiki.dominionstrategy.com/images/3/32/Harbinger.jpg"
+        ]
+    },
+    {
+        "id": 105,
+        "name": "Merchant",
+        "supply_card": true,
+        "basic_card": false,
+        "card_counts": [10,10,10,10,10],
+        "set_id": 1,
+        "editions": [2],
+        "card_tags": [
+            "IsAction",
+            "Costs3",
+            "WillReplaceAction",
+            "WillReplaceCard",
+            "CanGainCoin"
+        ],
+        "kingdom_requirements": [],
+        "kingdom_synergies": [["GainSilver"]],
+        "kingdom_anti_synergies": [],
+        "card_types": ["Action"],
+        "art_url": [
+            "http://wiki.dominionstrategy.com/images/7/78/Merchant.jpg"
+        ]
+    },
+    {
+        "id": 106,
+        "name": "Vassal",
+        "supply_card": true,
+        "basic_card": false,
+        "card_counts": [10,10,10,10,10],
+        "set_id": 1,
+        "editions": [2],
+        "card_tags": [
+            "IsAction",
+            "Costs3",
+            "WillGainCoin",
+            "CanDiscardCard"
+        ],
+        "kingdom_requirements": [["ControlsTopOfDeck"]],
+        "kingdom_synergies": [["AddCardToTopOfDeck"]],
+        "kingdom_anti_synergies": [],
+        "card_types": ["Action"],
+        "art_url": [
+            "http://wiki.dominionstrategy.com/images/0/0b/Vassal.jpg"
+        ]
+    },
+    {
+        "id": 107,
+        "name": "Village",
+        "supply_card": true,
+        "basic_card": false,
+        "card_counts": [10,10,10,10,10],
+        "set_id": 1,
+        "editions": [1, 2],
+        "card_tags": [
+            "IsAction",
+            "Costs3",
+            "WillReplaceAction",
+            "WillGainAction",
+            "WillReplaceCard"
+        ],
+        "kingdom_requirements": [],
+        "kingdom_synergies": [],
+        "kingdom_anti_synergies": [],
+        "card_types": ["Action"],
+        "art_url": [
+            "http://wiki.dominionstrategy.com/images/archive/5/5a/20161006160957%21Village.jpg", 
+            "http://wiki.dominionstrategy.com/images/5/5a/Village.jpg"
+        ]
+    },
+    {
+        "id": 108,
+        "name": "Woodcutter",
+        "supply_card": true,
+        "basic_card": false,
+        "card_counts": [10,10,10,10,10],
+        "set_id": 1,
+        "editions": [1],
+        "card_tags": [
+            "IsAction",
+            "Costs3",
+            "WillGainCoin",
+            "WillGainBuy"
+        ],
+        "kingdom_requirements": [],
+        "kingdom_synergies": [],
+        "kingdom_anti_synergies": [],
+        "card_types": ["Action"],
+        "art_url": [
+            "http://wiki.dominionstrategy.com/images/d/d6/Woodcutter.jpg"
+        ]
+    },
+    {
+        "id": 109,
+        "name": "Workshop",
+        "supply_card": true,
+        "basic_card": false,
+        "card_counts": [10,10,10,10,10],
+        "set_id": 1,
+        "editions": [1, 2],
+        "card_tags": [
+            "IsAction",
+            "Costs3",
+            "WillGainCardUnder4"
+        ],
+        "kingdom_requirements": [["Costs4"]],
+        "kingdom_synergies": [["Costs3"], ["Costs4"]],
+        "kingdom_anti_synergies": [],
+        "card_types": ["Action"],
+        "art_url": [
+            "http://wiki.dominionstrategy.com/images/archive/5/50/20161006163145%21Workshop.jpg", 
+            "http://wiki.dominionstrategy.com/images/5/50/Workshop.jpg"
+        ]
+    },
+    {
+        "id": 110,
+        "name": "Bureaucrat",
+        "supply_card": true,
+        "basic_card": false,
+        "card_counts": [10,10,10,10,10],
+        "set_id": 1,
+        "editions": [1, 2],
+        "card_tags": [
+            "IsAction",
+            "IsAttack",
+            "Costs4",
+            "AddCardToTopOfDeck",
+            "GainSilver",
+            "DiscardToTopOfDeckAttack"
+        ],
+        "kingdom_requirements": [],
+        "kingdom_synergies": [["IsVictory"]],
+        "kingdom_anti_synergies": [],
+        "card_types": ["Action", "Attack"],
+        "art_url": [
+            "http://wiki.dominionstrategy.com/images/archive/4/4d/20161006145745%21Bureaucrat.jpg", 
+            "http://wiki.dominionstrategy.com/images/4/4d/Bureaucrat.jpg"
+        ]
+    },
+    { 
+        "id": 111,
+        "name": "Feast",
+        "supply_card": true,
+        "basic_card": false,
+        "card_counts": [10,10,10,10,10],
+        "set_id": 1,
+        "editions": [1],
+        "card_tags": [
+            "IsAction",
+            "Costs4",
+            "TrashSelf",
+            "WillGainCardUnder5"
+        ],
+        "kingdom_requirements": [["Costs5"]],
+        "kingdom_synergies": [["Costs4"], ["Costs5"]],
+        "kingdom_anti_synergies": [],
+        "card_types": ["Action"],
+        "art_url": [
+            "http://wiki.dominionstrategy.com/images/9/9c/Feast.jpg"
+        ]
+    },
+    {
+        "id": 112,
+        "name": "Gardens",
+        "supply_card": true,
+        "basic_card": false,
+        "card_counts": [8,12,12,12,12],
+        "set_id": 1,
+        "editions": [1, 2],
+        "card_tags": [
+            "IsVictory",
+            "Costs4"
+        ],
+        "kingdom_requirements": [],
+        "kingdom_synergies": [["WillGainCardUnder4"], ["WillGainCardToHandUnder4"], ["WillGainCardUnder5"], ["WillGainCardToHandUnder5"]],
+        "kingdom_anti_synergies": [],
+        "card_types": ["Victory"],
+        "art_url": [
+            "http://wiki.dominionstrategy.com/images/archive/8/8c/20161006163424%21Gardens.jpg", 
+            "http://wiki.dominionstrategy.com/images/8/8c/Gardens.jpg"
+        ]
+    },
+    {
+        "id": 113,
+        "name": "Militia",
+        "supply_card": true,
+        "basic_card": false,
+        "card_counts": [10,10,10,10,10],
+        "set_id": 1,
+        "editions": [1, 2],
+        "card_tags": [
+            "IsAction",
+            "IsAttack",
+            "Costs4",
+            "WillGainCoin",
+            "DiscardingAttack"
+        ],
+        "kingdom_requirements": [],
+        "kingdom_synergies": [],
+        "kingdom_anti_synergies": [["DiscardingAttack"]],
+        "card_types": ["Action", "Attack"],
+        "art_url": [
+            "http://wiki.dominionstrategy.com/images/archive/a/a0/20161006154157%21Militia.jpg", 
+            "http://wiki.dominionstrategy.com/images/a/a0/Militia.jpg"
+        ]
+    },
+    {
+        "id": 114,
+        "name": "Moneylender",
+        "supply_card": true,
+        "basic_card": false,
+        "card_counts": [10,10,10,10,10],
+        "set_id": 1,
+        "editions": [1, 2],
+        "card_tags": [
+            "IsAction",
+            "Costs4",
+            "CanGainCoin",
+            "TrashFromHand",
+            "TrashTreasre"
+        ],
+        "kingdom_requirements": [],
+        "kingdom_synergies": [],
+        "kingdom_anti_synergies": [],
+        "card_types": ["Action"],
+        "art_url": [
+            "http://wiki.dominionstrategy.com/images/archive/7/70/20161006155017%21Moneylender.jpg", 
+            "http://wiki.dominionstrategy.com/images/7/70/Moneylender.jpg"
+        ]
+    },
+    {
+        "id": 115,
+        "name": "Poacher",
+        "supply_card": true,
+        "basic_card": false,
+        "card_counts": [10,10,10,10,10],
+        "set_id": 1,
+        "editions": [2],
+        "card_tags": [
+            "IsAction",
+            "Costs4",
+            "WillGainCoin",
+            "WillReplaceAction",
+            "WillReplaceCard",
+            "CanDiscardCard"
+        ],
+        "kingdom_requirements": [],
+        "kingdom_synergies": [],
+        "kingdom_anti_synergies": [],
+        "card_types": ["Action"],
+        "art_url": [
+            "http://wiki.dominionstrategy.com/images/a/a0/Poacher.jpg"
+        ]
+    },
+    {
+        "id": 116,
+        "name": "Remodel",
+        "supply_card": true,
+        "basic_card": false,
+        "card_counts": [10,10,10,10,10],
+        "set_id": 1,
+        "editions": [1, 2],
+        "card_tags": [
+            "IsAction",
+            "Costs4",
+            "WillGainCard",
+            "TrashForBenefit"
+        ],
+        "kingdom_requirements": [],
+        "kingdom_synergies": [["Costs4"], ["Costs2"]],
+        "kingdom_anti_synergies": [],
+        "card_types": ["Action"],
+        "art_url": [
+            "http://wiki.dominionstrategy.com/images/archive/2/2e/20161006160050%21Remodel.jpg", 
+            "http://wiki.dominionstrategy.com/images/2/2e/Remodel.jpg"
+        ]
+    },
+    {
+        "id": 117,
+        "name": "Smithy",
+        "supply_card": true,
+        "basic_card": false,
+        "card_counts": [10,10,10,10,10],
+        "set_id": 1,
+        "editions": [1, 2],
+        "card_tags": [
+            "IsAction",
+            "Costs4",
+            "WillReplaceCard",
+            "NetGainCards"
+        ],
+        "kingdom_requirements": [],
+        "kingdom_synergies": [],
+        "kingdom_anti_synergies": [],
+        "card_types": ["Action"],
+        "art_url": [
+            "http://wiki.dominionstrategy.com/images/archive/3/36/20161006160439%21Smithy.jpg", 
+            "http://wiki.dominionstrategy.com/images/3/36/Smithy.jpg"
+        ]
+    },
+    {
+        "id": 118,
+        "name": "Spy",
+        "supply_card": true,
+        "basic_card": false,
+        "card_counts": [10,10,10,10,10],
+        "set_id": 1,
+        "editions": [1],
+        "card_tags": [
+            "IsAction",
+            "IsAttack",
+            "Costs4",
+            "WillReplaceCard",
+            "WillReplaceAction",
+            "ControlsTopOfDeck"
+        ],
+        "kingdom_requirements": [],
+        "kingdom_synergies": [],
+        "kingdom_anti_synergies": [],
+        "card_types": ["Action", "Attack"],
+        "art_url": [
+            "http://wiki.dominionstrategy.com/images/c/cb/Spy.jpg"
+        ]
+    },
+    {
+        "id": 119,
+        "name": "Throne Room",
+        "supply_card": true,
+        "basic_card": false,
+        "card_counts": [10,10,10,10,10],
+        "set_id": 1,
+        "editions": [1, 2],
+        "card_tags": [
+            "IsAction",
+            "Costs4",
+            "UsesActionInHand"
+        ],
+        "kingdom_requirements": [["IsAction", "Costs5"]],
+        "kingdom_synergies": [["IsAction", "Costs5"], ["IsAction", "Costs6"]],
+        "kingdom_anti_synergies": [],
+        "card_types": ["Action"],
+        "art_url": [
+            "http://wiki.dominionstrategy.com/images/archive/d/d1/20161006160621%21Throne_Room.jpg",
+            "http://wiki.dominionstrategy.com/images/d/d1/Throne_Room.jpg"
+        ]
+    },
+    {
+        "id": 120,
+        "name": "Thief",
+        "supply_card": true,
+        "basic_card": false,
+        "card_counts": [10,10,10,10,10],
+        "set_id": 1,
+        "editions": [1],
+        "card_tags": [
+            "IsAction",
+            "IsAttack",
+            "Costs4",
+            "TrashingAttack",
+            "GainGold",
+            "GainSilver",
+            "GainCopper"
+        ],
+        "kingdom_requirements": [],
+        "kingdom_synergies": [["IsTreasure"]],
+        "kingdom_anti_synergies": [],
+        "card_types": ["Action", "Attack"],
+        "art_url": [
+            "http://wiki.dominionstrategy.com/images/f/f5/Thief.jpg"
+        ]
+    },
+    {
+        "id": 121,
+        "name": "Bandit",
+        "supply_card": true,
+        "basic_card": false,
+        "card_counts": [10,10,10,10,10],
+        "set_id": 1,
+        "editions": [2],
+        "card_tags": [
+            "IsAction",
+            "IsAttack",
+            "Costs5",
+            "TrashingAttack",
+            "GainGold"
+        ],
+        "kingdom_requirements": [],
+        "kingdom_synergies": [["IsTreasure"]],
+        "kingdom_anti_synergies": [],
+        "card_types": ["Action", "Attack"],
+        "art_url": [
+            "http://wiki.dominionstrategy.com/images/4/46/Bandit.jpg"
+        ]
+    },
+    {
+        "id": 122,
+        "name": "Council Room",
+        "supply_card": true,
+        "basic_card": false,
+        "card_counts": [10,10,10,10,10],
+        "set_id": 1,
+        "editions": [1,2],
+        "card_tags": [
+            "IsAction",
+            "Costs5",
+            "WillReplaceCard",
+            "NetGainCards",
+            "WillGainBuy"
+        ],
+        "kingdom_requirements": [],
+        "kingdom_synergies": [],
+        "kingdom_anti_synergies": [],
+        "card_types": ["Action"],
+        "art_url": [
+            "http://wiki.dominionstrategy.com/images/archive/e/e0/20161006150525%21Council_Room.jpg",
+            "http://wiki.dominionstrategy.com/images/e/e0/Council_Room.jpg"
+        ]
+    },
+    {
+        "id": 123,
+        "name": "Festival",
+        "supply_card": true,
+        "basic_card": false,
+        "card_counts": [10,10,10,10,10],
+        "set_id": 1,
+        "editions": [1,2],
+        "card_tags": [
+            "IsAction",
+            "Costs5",
+            "WillReplaceAction",
+            "WillGainAction",
+            "WillGainBuy",
+            "WillGainCoin"
+        ],
+        "kingdom_requirements": [],
+        "kingdom_synergies": [],
+        "kingdom_anti_synergies": [],
+        "card_types": ["Action"],
+        "art_url": [
+            "http://wiki.dominionstrategy.com/images/archive/e/ec/20161006151233%21Festival.jpg",
+            "http://wiki.dominionstrategy.com/images/e/ec/Festival.jpg"
+        ]
+    },
+    {
+        "id": 124,
+        "name": "Laboratory",
+        "supply_card": true,
+        "basic_card": false,
+        "card_counts": [10,10,10,10,10],
+        "set_id": 1,
+        "editions": [1,2],
+        "card_tags": [
+            "IsAction",
+            "Costs5",
+            "WillReplaceAction",
+            "WillReplaceCard",
+            "NetGainCards"
+        ],
+        "kingdom_requirements": [],
+        "kingdom_synergies": [],
+        "kingdom_anti_synergies": [],
+        "card_types": ["Action"],
+        "art_url": [
+            "http://wiki.dominionstrategy.com/images/archive/0/0c/20161006152751%21Laboratory.jpg",
+            "http://wiki.dominionstrategy.com/images/0/0c/Laboratory.jpg"
+        ]
+    },
+    {
+        "id": 125,
+        "name": "Library",
+        "supply_card": true,
+        "basic_card": false,
+        "card_counts": [10,10,10,10,10],
+        "set_id": 1,
+        "editions": [1,2],
+        "card_tags": [
+            "IsAction",
+            "Costs5",
+            "WillReplaceCard",
+            "NetGainCards"
+        ],
+        "kingdom_requirements": [],
+        "kingdom_synergies": [],
+        "kingdom_anti_synergies": [],
+        "card_types": ["Action"],
+        "art_url": [
+            "http://wiki.dominionstrategy.com/images/archive/9/98/20161006153054%21Library.jpg",
+            "http://wiki.dominionstrategy.com/images/9/98/Library.jpg"
+        ]
+    },
+    {
+        "id": 126,
+        "name": "Market",
+        "supply_card": true,
+        "basic_card": false,
+        "card_counts": [10,10,10,10,10],
+        "set_id": 1,
+        "editions": [1,2],
+        "card_tags": [
+            "IsAction",
+            "Costs5",
+            "WillReplaceCard",
+            "WillReplaceAction",
+            "WillGainBuy",
+            "WillGainCoin"
+        ],
+        "kingdom_requirements": [],
+        "kingdom_synergies": [],
+        "kingdom_anti_synergies": [],
+        "card_types": ["Action"],
+        "art_url": [
+            "http://wiki.dominionstrategy.com/images/archive/7/7e/20161006153406%21Market.jpg",
+            "http://wiki.dominionstrategy.com/images/7/7e/Market.jpg"
+        ]
+    },
+    {
+        "id": 127,
+        "name": "Mine",
+        "supply_card": true,
+        "basic_card": false,
+        "card_counts": [10,10,10,10,10],
+        "set_id": 1,
+        "editions": [1,2],
+        "card_tags": [
+            "IsAction",
+            "Costs5",
+            "GainSilver",
+            "GainGold"
+        ],
+        "kingdom_requirements": [],
+        "kingdom_synergies": [["IsTreasure"]],
+        "kingdom_anti_synergies": [],
+        "card_types": ["Action"],
+        "art_url": [
+            "http://wiki.dominionstrategy.com/images/archive/8/8e/20161006154352%21Mine.jpg",
+            "http://wiki.dominionstrategy.com/images/8/8e/Mine.jpg"
+        ]
+    },
+    {
+        "id": 128,
+        "name": "Sentry",
+        "supply_card": true,
+        "basic_card": false,
+        "card_counts": [10,10,10,10,10],
+        "set_id": 1,
+        "editions": [2],
+        "card_tags": [
+            "IsAction",
+            "Costs5",
+            "WillReplaceAction",
+            "WillReplaceCard",
+            "DiscardToTopOfDeckAttack",
+            "TrashFromDeck",
+            "TrashTreasre",
+            "TrashAction",
+            "TrashVictory",
+            "TrashCurse"
+        ],
+        "kingdom_requirements": [],
+        "kingdom_synergies": [],
+        "kingdom_anti_synergies": [],
+        "card_types": ["Action"],
+        "art_url": [
+            "http://wiki.dominionstrategy.com/images/4/4c/Sentry.jpg"
+        ]
+    },
+    {
+        "id": 129,
+        "name": "Witch",
+        "supply_card": true,
+        "basic_card": false,
+        "card_counts": [10,10,10,10,10],
+        "set_id": 1,
+        "editions": [1,2],
+        "card_tags": [
+            "IsAction",
+            "IsAttack",
+            "Costs5",
+            "WillReplaceCard",
+            "NetGainCards",
+            "CurseAttack"
+        ],
+        "kingdom_requirements": [],
+        "kingdom_synergies": [["TrashCurse"]],
+        "kingdom_anti_synergies": [],
+        "card_types": ["Action", "Attack"],
+        "art_url": [
+            "http://wiki.dominionstrategy.com/images/archive/f/f3/20161006161327%21Witch.jpg",
+            "http://wiki.dominionstrategy.com/images/f/f3/Witch.jpg"
+        ]
+    },
+    {
+        "id": 130,
+        "name": "Artisan",
+        "supply_card": true,
+        "basic_card": false,
+        "card_counts": [10,10,10,10,10],
+        "set_id": 1,
+        "editions": [2],
+        "card_tags": [
+            "IsAction",
+            "Costs6",
+            "WillGainCardUnder5",
+            "ControlsTopOfDeck"
+        ],
+        "kingdom_requirements": [],
+        "kingdom_synergies": [],
+        "kingdom_anti_synergies": [],
+        "card_types": ["Action"],
+        "art_url": [
+            "http://wiki.dominionstrategy.com/images/1/1d/Artisan.jpg"
+        ]
+    },
+    {
+        "id": 131,
+        "name": "Adventurer",
+        "supply_card": true,
+        "basic_card": false,
+        "card_counts": [10,10,10,10,10],
+        "set_id": 1,
+        "editions": [1],
+        "card_tags": [
+            "IsAction",
+            "Costs6",
+            "NetGainCards"
+        ],
+        "kingdom_requirements": [],
+        "kingdom_synergies": [["ControlsTopOfDeck"], ["IsTreasure"]],
+        "kingdom_anti_synergies": [],
+        "card_types": ["Action"],
+        "art_url": [
+            "http://wiki.dominionstrategy.com/images/7/71/Adventurer.jpg"
+        ]
+    }
+]
