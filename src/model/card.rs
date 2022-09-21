@@ -16,7 +16,7 @@ pub struct Card {
     pub set_id: u8,
     pub editions: Vec<u8>,
     pub card_tags: Vec<CardTag>,
-    pub kingdom_requirements: Vec<Vec<CardTag>>, // TODO KINg
+    pub kingdom_requirements: Vec<Vec<CardTag>>,
     pub kingdom_synergies: Vec<Vec<CardTag>>,
     pub kingdom_anti_synergies: Vec<Vec<CardTag>>,
     pub card_types: Vec<CardType>,
@@ -25,16 +25,12 @@ pub struct Card {
 
 pub trait CardFilepath {
     fn get_art_path(&self, edition: u8) -> String;
+    fn get_art_file_name(&self, edition: u8) -> String;
 }
 
 impl CardFilepath for Card {
     fn get_art_path(&self, edition: u8) -> String {
-        if !self.editions.contains(&edition){ panic!("Unkowen edition."); }
-        let regex = Regex::new(r"[\s<>:;',?*|\\]").unwrap();
-        let safe_card_name = regex.replace_all(
-            format!("{0}_{1}", self.name, edition).as_str(), 
-            "-"
-        ).as_ref().to_string();
+        let safe_card_name = self.get_art_file_name(edition);
         let target_folder = canonicalize("src/model/scraped_data/").unwrap();
         let mut path = PathBuf::new();
         path.push(target_folder);
@@ -42,6 +38,15 @@ impl CardFilepath for Card {
         path.push(safe_card_name);
         path.set_extension("jpeg");
         path.as_path().to_string_lossy().into_owned()
+    }
+    
+    fn get_art_file_name(&self, edition: u8) -> String {
+        if !self.editions.contains(&edition){ panic!("Unkowen edition."); }
+        let regex = Regex::new(r"[\s<>:;',?*|\\]").unwrap();
+        regex.replace_all(
+            format!("{0}_{1}", self.name, edition).as_str(), 
+            "-"
+        ).as_ref().to_string()
     }
 }
 
@@ -704,8 +709,6 @@ mod test {
             card_types: [CardType::Action, CardType::Attack ,CardType::Curse].to_vec(),
             art_url: ["www.image1.com".to_string(), "www.image2.com".to_string()].to_vec()
         };
-        println!("{}", card.get_art_path(1));
-        println!("{}", card.get_art_path(2));
         assert!(
             card.get_art_path(1).ends_with("\\cards\\test-name_1.jpeg") ||
             card.get_art_path(1).ends_with("/cards/test-name_1.jpeg") 
@@ -734,5 +737,48 @@ mod test {
             art_url: ["www.image1.com".to_string(), "www.image2.com".to_string()].to_vec()
         };
         let _ = card.get_art_path(45);
+    }
+
+    
+    #[test]
+    fn test_get_art_file_name() {
+        let card = Card { 
+            id: 1,
+            name: "test name".to_string(),
+            supply_card: true,
+            basic_card: false,
+            card_counts: [10, 10, 10, 10, 10],
+            set_id: 0,
+            editions: [1, 2].to_vec(),
+            card_tags: [CardTag::Costs4].to_vec(),
+            kingdom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
+            kingdom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
+            kingdom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
+            card_types: [CardType::Action, CardType::Attack ,CardType::Curse].to_vec(),
+            art_url: ["www.image1.com".to_string(), "www.image2.com".to_string()].to_vec()
+        };
+        assert_eq!(card.get_art_file_name(1), "test-name_1");
+        assert_eq!(card.get_art_file_name(2), "test-name_2");
+    }
+        
+    #[test]
+    #[should_panic = "Unkowen edition."]
+    fn test_get_art_file_name_unknowen_edition() {
+        let card = Card { 
+            id: 1,
+            name: "test name".to_string(),
+            supply_card: true,
+            basic_card: false,
+            card_counts: [10, 10, 10, 10, 10],
+            set_id: 0,
+            editions: [1, 2].to_vec(),
+            card_tags: [CardTag::Costs4].to_vec(),
+            kingdom_requirements: [[CardTag::AddCardToTopOfDeck].to_vec()].to_vec(),
+            kingdom_synergies: [[CardTag::CanReplaceAction].to_vec()].to_vec(),
+            kingdom_anti_synergies: [[CardTag::WillReplaceAction].to_vec()].to_vec(),
+            card_types: [CardType::Action, CardType::Attack ,CardType::Curse].to_vec(),
+            art_url: ["www.image1.com".to_string(), "www.image2.com".to_string()].to_vec()
+        };
+        let _ = card.get_art_file_name(45);
     }
 }
