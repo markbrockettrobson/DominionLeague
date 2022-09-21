@@ -29,7 +29,7 @@ mod test {
     }
 
     #[test]
-    fn test_card_json_from_id_unknowen_name() {
+    fn test_card_json_from_id_unknowen_id() {
         let client = Client::tracked(launch_app()).expect("valid rocket instance");
         let response = client.get(uri!(super::card_json_from_id(6550))).dispatch();
         assert_eq!(response.status(), Status::Ok);
