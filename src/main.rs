@@ -1,4 +1,5 @@
 #[macro_use] extern crate rocket;
+use crate::endpoints::card_art::MountCardArtFileServer;
 
 pub mod endpoints;
 pub mod model;
@@ -16,6 +17,7 @@ use crate::endpoints::{
 fn launch_app() -> Rocket<Build> {
     build()
     .manage(build_card_data())
+    .mount_card_art_file_server()
     .mount("/", routes![health, card_json_from_id, card_json_from_name])
 }
 
