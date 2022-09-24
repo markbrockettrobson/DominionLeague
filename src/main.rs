@@ -10,7 +10,9 @@ use rocket::{Rocket, Build, build};
 use crate::endpoints::{ 
     health::health, 
     card_json_from_id::card_json_from_id, 
-    card_json_from_name::card_json_from_name };
+    card_json_from_name::card_json_from_name,
+    card_art_from_id::{card_art_from_id, card_art_from_id_with_edition}
+ };
 
 #[launch]
 #[mutants::skip]
@@ -18,7 +20,12 @@ fn launch_app() -> Rocket<Build> {
     build()
     .manage(build_card_data())
     .mount_card_art_file_server()
-    .mount("/", routes![health, card_json_from_id, card_json_from_name])
+    .mount("/", routes![
+        health,
+        card_json_from_id,
+        card_json_from_name,
+        card_art_from_id,
+        card_art_from_id_with_edition])
 }
 
 #[cfg(test)]
