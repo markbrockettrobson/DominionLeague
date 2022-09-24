@@ -14,7 +14,7 @@ mod test {
     use crate::launch_app;
 
     #[test]
-    fn health() {
+    fn test_health() {
         let client = Client::tracked(launch_app()).expect("valid rocket instance");
         let response = client.get(uri!(super::health)).dispatch();
         assert_eq!(response.status(), Status::Ok);

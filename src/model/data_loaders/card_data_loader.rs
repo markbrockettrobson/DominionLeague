@@ -1,4 +1,4 @@
-use std::include_bytes;
+use std::{include_bytes, collections::HashMap};
 use rocket::serde::json::serde_json;
 
 use super::super::card::Card;
@@ -26,6 +26,25 @@ pub fn get_all_card_vec() -> Vec<Card> {
     all_cards.extend(get_base_card_vec());
     all_cards.extend(get_dominion_card_vec());
     all_cards
+}
+
+#[allow(dead_code)]
+pub fn get_all_card_id_map() -> HashMap<u16, Card> {
+    let mut map = HashMap::new();
+    for card in get_all_card_vec() {
+        map.insert(card.id, card);
+    }
+    map
+}
+
+#[allow(dead_code)]
+pub fn get_all_card_name_map() -> HashMap<String, Card> {
+    let mut map = HashMap::new();
+    for card in get_all_card_vec() {
+        map.insert(card.name.clone(), card.clone());
+        map.insert(card.name.clone().to_ascii_lowercase(), card);
+    }
+    map
 }
 
 #[cfg(test)]
@@ -66,6 +85,30 @@ mod test {
         let cards = get_dominion_card_vec();
         for (index, card) in cards.iter().enumerate() {
             assert_eq!(card.id, (index + 100) as u16);
+        }
+    }
+
+    #[test]
+    fn test_get_all_card_id_map() {
+        let card_map = get_all_card_id_map();
+        for card in get_all_card_vec().iter() {
+            assert_eq!(card, &card_map[&card.id]);
+        }
+    }
+
+    #[test]
+    fn test_get_all_card_name_map() {
+        let card_map = get_all_card_name_map();
+        for card in get_all_card_vec().iter() {
+            assert_eq!(card, &card_map[&card.name]);
+        }
+    }
+
+    #[test]
+    fn test_get_all_card_name_map_has_lower_case() {
+        let card_map = get_all_card_name_map();
+        for card in get_all_card_vec().iter() {
+            assert_eq!(card, &card_map[&card.name.to_ascii_lowercase()]);
         }
     }
 }
