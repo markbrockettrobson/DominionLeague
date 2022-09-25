@@ -5,3 +5,4 @@ pub mod set;
 pub mod data_loaders;
 pub mod state;
 pub mod scrapers;
+pub mod kingdom;
