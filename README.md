@@ -1,3 +1,5 @@
+This project has been shelved
+
 # DominionLeague
 a tool to run a friendly dominion league
 
